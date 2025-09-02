@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- 
+    Projeto: Site institucional da ASA CÍVICA
+    Objetivo: Apresentar a empresa, seus projetos, serviços e canais de contato
+    
+    Observações:
+    - Todas as classes e IDs em português
+    - Comentários em português
+    - Layout responsivo, acessível e moderno
+    - Sem dependências externas (apenas HTML, CSS e um pouco de JS nativo)
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASA CÍVICA — Tecnologia social para educação e inclusão</title>
+  <meta name="description" content="ASA CÍVICA: tecnologia social para educação e inclusão. Projetos, serviços e contato." />
+
+  <style>
+    /* ============================= VARIÁVEIS DE TEMA / CORES ============================= */
+    :root {
+      --cor-primaria: #0ea5e9; /* azul vivo */
+      --cor-secundaria: #22c55e; /* verde */
+      --cor-escura: #0f172a; /* azul muito escuro para títulos */
+      --cor-texto: #334155; /* cinza-azulado para textos */
+      --cor-fundo: #f8fafc; /* fundo claro */
+      --cor-cartao: #ffffff; /* branco para cartões */
+      --cor-borda: #e2e8f0; /* cinza claro para divisórias */
+      --sombra-suave: 0 10px 30px rgba(2, 6, 23, 0.08);
+      --raio: 16px; /* bordas arredondadas padrão */
+      --espaco: 1rem; /* unidade base de espaçamento */
+      --larga: 1200px; /* largura máxima do conteúdo */
+      --transicao: 200ms ease; /* transição padrão */
+    }
+
+    /* ============================= RESETA E BASE TIPOGRÁFICA ============================= */
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+      color: var(--cor-texto);
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .conteudo {
+      max-width: var(--larga);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+    .titulo-secao {
+      margin: 0 0 0.5rem 0;
+      font-weight: 800;
+      color: var(--cor-escura);
+      letter-spacing: -0.02em;
+    }
+    .subtitulo-secao {
+      margin: 0 0 2rem 0;
+      color: #475569;
+    }
+
+    /* ============================= CABEÇALHO FIXO ============================= */
+    .cabecalho {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--cor-borda);
+    }
+    .barra-cabecalho {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+    }
+    .marca {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 900;
+      color: var(--cor-escura);
+    }
+    .marca__simbolo {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 800;
+    }
+    .menu-navegacao {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .link-menu {
+      padding: 0.5rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+    .link-menu:hover {
+      border-color: var(--cor-borda);
+      background: #ffffff;
+      box-shadow: var(--sombra-suave);
+    }
+    .botao-primario {
+      background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+      color: #fff;
+      padding: 0.65rem 1rem;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: var(--sombra-suave);
+    }
+    .botao-primario:hover {
+      filter: brightness(1.05);
+    }
+    .botao-menu {
+      display:none;
+      background: none;
+      border: 0;
+      font-size: 1.25rem;
+    }
+
+    /* ============================= FAIXA HERÓI (BANNER INICIAL) ============================= */
+    .faixa-heroi {
+      position: relative;
+      overflow: clip;
+      border-bottom: 1px solid var(--cor-borda);
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(14,165,233,0.25), transparent 60%), radial-gradient(1000px 600px at 120% 10%, rgba(34,197,94,0.25), transparent 60%), #f8fafc;
+    }
+    .faixa-heroi__conteudo {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 4rem 0 3rem;
+    }
+    .chamada-principal {
+      font-size: clamp(1.6rem, 3.2vw, 3rem);
+      margin: 0 0 1rem 0;
+      color: var(--cor-escura);
+      font-weight: 900;
+    }
+    .chamada-secundaria {
+      margin: 0 0 1.5rem 0;
+      color: #475569;
+      max-width: 52ch;
+    }
+    .grupo-botoes {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .cartaz-decorativo {
+      background: var(--cor-cartao);
+      border: 1px solid var(--cor-borda);
+      border-radius: var(--raio);
+      padding: 1rem;
+      box-shadow: var(--sombra-suave);
+    }
+    .cartaz-decorativo__painel {
+      height: 280px;
+      border-radius: 12px;
+      background: #ffffff; /* fundo branco conforme solicitado */
+      display: grid;
+      place-items: center;
+      color: #0b5b74;
+      font-weight: 800;
+      text-align: center;
+    }
+    /* 
+      >>> DOCUMENTALIZAÇÃO:
+      - Para inserir uma imagem no cartaz decorativo, substitua o conteúdo do painel.
+      Exemplo:
+      <div class="cartaz-decorativo__painel">
+        <img src="caminho/da/sua-imagem.jpg" alt="Descrição da imagem" />
+      </div>
+    */
+
+    /* ============================= SEÇÕES GERAIS ============================= */
+    .secao {
+      padding: 4rem 0;
+    }
+    .grade-cartoes {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.25rem;
+    }
+    .cartao {
+      grid-column: span 4;
+      background: var(--cor-cartao);
+      border: 1px solid var(--cor-borda);
+      border-radius: var(--raio);
+      padding: 1.25rem;
+      box-shadow: var(--sombra-suave);
+    }
+    .cartao__icone {
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+      color: #fff;
+    }
+    .cartao__titulo {
+      margin: 0 0 0.25rem 0;
+      font-weight: 800;
+      color: var(--cor-escura);
+    }
+    @media (max-width: 1024px) {
+      .cartao { grid-column: span 6; }
+    }
+    @media (max-width: 640px) {
+      .cartao { grid-column: span 12; }
+    }
+
+    /* ============================= SEÇÃO SOBRE NÓS ============================= */
+    .sobre-nos__conteudo {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .lista-valores {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0 0;
+    }
+    .lista-valores li {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 0.6rem;
+      align-items: start;
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 900px) {
+      .faixa-heroi__conteudo, .sobre-nos__conteudo {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ============================= SEÇÃO PROJETOS ============================= */
+    .cartao-projeto__imagem {
+      height: 160px;
+      border-radius: 12px;
+      margin-bottom: 0.8rem;
+      background: #ffffff; /* fundo branco para facilitar inserção de imagem */
+      border: 1px solid var(--cor-borda);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .cartao-projeto__imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* <- esse corta a imagem */
+  border-radius: 12px;
+}
+    /*
+      >>> DOCUMENTALIZAÇÃO:
+      - Para inserir imagem no cartão de projeto, coloque a tag <img> dentro do div.cartao-projeto__imagem.
+      Exemplo:
+      <div class="cartao-projeto__imagem">
+        <img src="caminho/da/sua-imagem.jpg" alt="Descrição da imagem do projeto" />
+      </div>
+    */
+    .etiqueta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: #ecfeff;
+      color: #0e7490;
+      border: 1px solid #cffafe;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    /* ============================= SEÇÃO SERVIÇOS ============================= */
+    .servicos__lista {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+    .servico {
+      background: var(--cor-cartao);
+      border: 1px solid var(--cor-borda);
+      border-radius: var(--raio);
+      padding: 1.25rem;
+      box-shadow: var(--sombra-suave);
+    }
+    .servico__topo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 900px) {
+      .servicos__lista { grid-template-columns: 1fr; }
+    }
+
+    /* ============================= SEÇÃO CONTATO ============================= */
+    .contato__grade {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    .campo-formulario {
+      display: grid;
+      gap: 0.35rem;
+    }
+    .campo-formulario input,
+    .campo-formulario textarea {
+      padding: 0.9rem 1rem;
+      border-radius: 12px;
+      border: 1px solid var(--cor-borda);
+      background: #fff;
+      outline: none;
+      transition: border var(--transicao), box-shadow var(--transicao);
+    }
+    .campo-formulario input:focus,
+    .campo-formulario textarea:focus {
+      border-color: var(--cor-primaria);
+      box-shadow: 0 0 0 3px rgba(14,165,233,0.15);
+    }
+    .contato__acoes {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 900px) {
+      .contato__grade { grid-template-columns: 1fr; }
+    }
+
+    /* ============================= RODAPÉ ============================= */
+    .rodape {
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--cor-borda);
+      background: #ffffffa8;
+      backdrop-filter: blur(6px);
+    }
+    .rodape__grade {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 1.25rem;
+    }
+    .rodape__coluna h4 {
+      margin: 0 0 0.5rem 0;
+      color: var(--cor-escura);
+    }
+    .lista-simples {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.35rem;
+    }
+    @media (max-width: 900px) {
+      .rodape__grade { grid-template-columns: 1fr; }
+    }
+
+    /* ============================= ACESSIBILIDADE / PREFERÊNCIAS ============================= */
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ============================= CABEÇALHO E NAVEGAÇÃO ============================= -->
+  <header class="cabecalho" aria-label="Cabeçalho do site">
+    <div class="conteudo barra-cabecalho">
+      <a class="marca" href="#inicio" aria-label="Ir para o início">
+        <span class="marca__simbolo" aria-hidden="true">AC</span>
+        <span>ASA CÍVICA</span>
+      </a>
+      <nav class="menu-navegacao" aria-label="Menu principal">
+        <a class="link-menu" href="#sobre-nos">Sobre</a>
+        <a class="link-menu" href="#projetos">Projetos</a>
+        <a class="link-menu" href="#servicos">Serviços</a>
+        <a class="link-menu botao-primario" href="#contato">Contato</a>
+      </nav>
+      <!-- Botão de menu para telas pequenas (sem ícone externo) -->
+      <button class="botao-menu" id="abrir-menu" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ============================= FAIXA HERÓI (INÍCIO) ============================= -->
+  <section id="inicio" class="faixa-heroi" aria-label="Apresentação">
+    <div class="conteudo faixa-heroi__conteudo">
+      <div>
+        <h1 class="chamada-principal">Tecnologia social para educação e inclusão</h1>
+        <p class="chamada-secundaria">A ASA CÍVICA desenvolve soluções digitais que aproximam comunidades, escolas e gestores. Criamos produtos com acessibilidade, transparência e impacto social real.</p>
+        <div class="grupo-botoes">
+          <a class="botao-primario" href="#projetos">Conheça nossos projetos</a>
+          <a class="link-menu" href="#sobre-nos">Saiba mais</a>
+        </div>
+      </div>
+      <aside class="cartaz-decorativo" aria-hidden="true">
+  <div class="cartaz-decorativo__painel" style="text-align:center;">
+    <img src="Imagens\ASA CÍVICA.png" alt="Cartaz decorativo com ilustração de educação inclusiva" style="width:250px; height:auto; border-radius:12px;" />
+  </div>
+</aside>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============================= SOBRE NÓS ============================= -->
+  <section id="sobre-nos" class="secao" aria-label="Sobre a empresa">
+    <div class="conteudo sobre-nos__conteudo">
+      <div>
+        <h2 class="titulo-secao">Sobre nós</h2>
+        <p class="subtitulo-secao"> pesquisa aplicada, design inclusivo e desenvolvimento de plataformas para fortalecer a educação e a cidadania.</p>
+        <ul class="lista-valores">
+          <li><span aria-hidden="true">✅</span> <span><strong>Inovação útil:</strong> soluções digitais que resolvem problemas reais.</span></li>
+          <li><span aria-hidden="true">✅</span> <span><strong>Acessibilidade:</strong> princípios WCAG incorporados desde o início.</span></li>
+          <li><span aria-hidden="true">✅</span> <span><strong>Transparência:</strong> dados organizados para decisões melhores.</span></li>
+        </ul>
+      </div>
+      
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= PROJETOS ============================= -->
+  <section id="projetos" class="secao" aria-label="Projetos e iniciativas">
+    <div class="conteudo">
+      <h2 class="titulo-secao">Projetos</h2>
+      <p class="subtitulo-secao">Conheça algumas iniciativas que estamos desenvolvendo com parceiros e comunidades.</p>
+      <div class="grade-cartoes">
+        <!-- Projeto 1: MapEdu+ -->
+        <!-- Projeto 1: MapEdu+ -->
+        <article class="cartao cartao-projeto" aria-label="Projeto MapEdu+">
+  <div class="cartao-projeto__imagem" style="background-color: #53a4eb; text-align:center; padding:10px;">
+  <img src="Imagens/MAPEDU.png" 
+       alt="Mapa estilizado representando escolas inclusivas"
+       style="width: 160px; height: auto; border-radius: 12px;" />
+</div>
+  <span class="etiqueta">Educação inclusiva</span>
+  <h3 class="cartao__titulo">MapEdu+</h3>
+  <p>Plataforma colaborativa que mapeia instituições de ensino com estruturas e práticas inclusivas, oferecendo dados organizados para famílias e gestores.</p>
+  <a href="#contato" class="link-menu">Falar sobre parceria →</a>
+</article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= SERVIÇOS ============================= -->
+  <section id="servicos" class="secao" aria-label="Serviços oferecidos">
+    <div class="conteudo">
+      <h2 class="titulo-secao">Serviços</h2>
+      <p class="subtitulo-secao">O que podemos fazer junto com sua instituição.</p>
+      <div class="servicos__lista">
+        <article class="servico">
+          <div class="servico__topo">
+            <div class="cartao__icone" aria-hidden="true">💻</div>
+            <h3 class="cartao__titulo">Desenvolvimento de plataformas</h3>
+          </div>
+          <p>Projetamos e construímos soluções web acessíveis e responsivas para educação e participação social.</p>
+        </article>
+        <article class="servico">
+          <div class="servico__topo">
+            <div class="cartao__icone" aria-hidden="true">📊</div>
+            <h3 class="cartao__titulo">Dados e indicadores</h3>
+          </div>
+          <p>Organização de dados educacionais, painéis e relatórios para apoiar decisões de gestores públicos e privados.</p>
+        </article>
+        
+      </div>
+    </div>
+  </section>
+
+<!-- ============================= CONTATO ============================= -->
+<section id="contato" class="secao" aria-label="Fale conosco">
+  <div class="conteudo">
+    <h2 class="titulo-secao">Contato</h2>
+    <p class="subtitulo-secao">Entre em contato pelo email abaixo:</p>
+
+    <div class="contato__informacao">
+      <p>Email: <a href="mailto:asacivica@gmail.com">asacivica@gmail.com</a></p>
+    </div>
+
+    <div class="contato__acoes">
+      <a class="link-menu" href="#inicio">Voltar ao início</a>
+    </div>
+  </div>
+</section>
+  <!-- ============================= RODAPÉ ============================= -->
+  <footer class="rodape" aria-label="Rodapé do site">
+    <div class="conteudo rodape__grade">
+      <div class="rodape__coluna">
+        <div class="marca" style="margin-bottom:0.5rem;">
+          <span class="marca__simbolo" aria-hidden="true">AC</span>
+          <span>ASA CÍVICA</span>
+        </div>
+        <p>Transformando educação e inclusão com tecnologia social.</p>
+      </div>
+      <div class="rodape__coluna">
+        <h4>Atalhos</h4>
+        <ul class="lista-simples">
+          <li><a href="#sobre-nos">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div class="rodape__coluna">
+        <h4>Contato</h4>
+        <ul class="lista-simples">
+          <li>Porto Velho — RO</li>
+          <li><a href="#contato">Fale conosco</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // =============================
+    // JavaScript mínimo para abrir/fechar menu em telas pequenas
+    // =============================
+    (function(){
+      const botao = document.getElementById('abrir-menu');
+      const nav = document.querySelector('.menu-navegacao');
+
+      function alternar(){
+        nav.style.display = (nav.style.display === 'flex' ? 'none' : 'flex');
+      }
+
+      function ajustar(){
+        if (window.innerWidth > 900) {
+          nav.style.display = 'flex';
+        } else {
+          nav.style.display = 'none';
+        }
+      }
+
+      if (botao) { botao.addEventListener('click', alternar); }
+      window.addEventListener('resize', ajustar);
+      ajustar();
+    })();
+  </script>
+</body>
+</html>
