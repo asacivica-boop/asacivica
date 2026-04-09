@@ -4,9 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ASA CÍVICA — Tecnologia social para educação e inclusão</title>
-  <meta name="description" content="ASA CÍVICA: tecnologia social para educação e inclusão. Projetos, serviços e contato." />
+  <meta name="description" content="ASA CÍVICA desenvolve soluções digitais para educação inclusiva, inteligência de dados e gestão educacional com o ecossistema MapEdu+." />
 
-  <!-- Fontes com mais personalidade -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -66,7 +65,6 @@
       margin: 0 auto;
     }
 
-    /* HEADER */
     .cabecalho {
       position: sticky;
       top: 0;
@@ -166,9 +164,9 @@
       border-radius: 14px;
       padding: .75rem .9rem;
       font-size: 1.2rem;
+      cursor: pointer;
     }
 
-    /* HERO */
     .hero {
       position: relative;
       min-height: 78vh;
@@ -183,8 +181,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.00) 65%, rgba(255,255,255,0.04) 100%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.00) 65%, rgba(255,255,255,0.04) 100%);
       pointer-events: none;
     }
 
@@ -198,7 +195,7 @@
     }
 
     .hero__texto {
-      max-width: 720px;
+      max-width: 760px;
       color: white;
     }
 
@@ -231,9 +228,9 @@
     }
 
     .hero__descricao {
-      max-width: 54ch;
+      max-width: 62ch;
       font-size: 1.08rem;
-      line-height: 1.7;
+      line-height: 1.75;
       color: rgba(255,255,255,0.92);
       margin: 0 0 1.8rem;
     }
@@ -280,7 +277,6 @@
       background: rgba(255,255,255,0.18);
     }
 
-    /* BLOCO SOBREPOSTO */
     .destaque-flutuante {
       position: relative;
       margin-top: -90px;
@@ -288,7 +284,7 @@
     }
 
     .destaque-flutuante__caixa {
-      width: min(100%, 760px);
+      width: min(100%, 860px);
       background: #111111;
       color: white;
       padding: 2rem 2rem 2.1rem;
@@ -317,10 +313,9 @@
       line-height: 1.75;
       color: rgba(255,255,255,0.88);
       margin: 0;
-      max-width: 54ch;
+      max-width: 58ch;
     }
 
-    /* BLOCOS ABAIXO */
     .atalhos {
       padding: 2.2rem 0 1rem;
     }
@@ -368,7 +363,6 @@
       line-height: 1.65;
     }
 
-    /* SEÇÕES */
     .secao {
       padding: 4.8rem 0;
     }
@@ -386,11 +380,10 @@
       color: #64748b;
       font-size: 1.02rem;
       line-height: 1.75;
-      max-width: 64ch;
+      max-width: 70ch;
       margin: 0 0 2rem;
     }
 
-    /* SOBRE */
     .sobre {
       display: grid;
       grid-template-columns: 1.05fr .95fr;
@@ -450,7 +443,11 @@
       font-size: 1.05rem;
     }
 
-    /* PROJETOS */
+    .caixa-lateral p {
+      margin: 0;
+      line-height: 1.75;
+    }
+
     .grade-projetos {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -520,7 +517,6 @@
       font-weight: 800;
     }
 
-    /* SERVIÇOS */
     .grade-servicos {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -562,7 +558,74 @@
       line-height: 1.7;
     }
 
-    /* CONTATO */
+    .investidores {
+      background: linear-gradient(135deg, #0b1422 0%, #10233d 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .investidores::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(214,164,25,0.18), transparent 22%),
+        radial-gradient(circle at bottom left, rgba(255,255,255,0.05), transparent 18%);
+      pointer-events: none;
+    }
+
+    .investidores__grade {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 1.4rem;
+      align-items: stretch;
+    }
+
+    .investidores .titulo-secao {
+      color: white;
+    }
+
+    .investidores .subtitulo-secao {
+      color: rgba(255,255,255,0.82);
+      max-width: 62ch;
+    }
+
+    .investidores__card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: var(--sombra-2);
+      padding: 1.6rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .investidores__card h3 {
+      margin: 0 0 .7rem;
+      font-size: 1.2rem;
+      color: var(--dourado-2);
+    }
+
+    .investidores__card p,
+    .investidores__card li {
+      color: rgba(255,255,255,0.88);
+      line-height: 1.75;
+    }
+
+    .investidores__lista {
+      list-style: none;
+      margin: 1rem 0 0;
+      padding: 0;
+      display: grid;
+      gap: .8rem;
+    }
+
+    .investidores__lista li {
+      padding-left: 1rem;
+      border-left: 3px solid var(--dourado-1);
+    }
+
     .contato {
       display: grid;
       grid-template-columns: 1.1fr .9fr;
@@ -595,7 +658,6 @@
       margin-top: 1.2rem;
     }
 
-    /* RODAPÉ */
     .rodape {
       background: #0b1422;
       color: rgba(255,255,255,0.84);
@@ -628,7 +690,6 @@
       color: var(--dourado-2);
     }
 
-    /* RESPONSIVO */
     @media (max-width: 1100px) {
       .atalhos__grade {
         grid-template-columns: repeat(2, 1fr);
@@ -636,7 +697,8 @@
 
       .sobre,
       .contato,
-      .grade-servicos {
+      .grade-servicos,
+      .investidores__grade {
         grid-template-columns: 1fr;
       }
     }
@@ -732,7 +794,8 @@
       <nav class="menu-navegacao">
         <a class="link-menu" href="#sobre">Sobre</a>
         <a class="link-menu" href="#projetos">Projetos</a>
-        <a class="link-menu" href="#servicos">Serviços</a>
+        <a class="link-menu" href="#servicos">Soluções</a>
+        <a class="link-menu" href="#investidores">Expansão</a>
         <a class="botao-topo" href="#contato">FALAR AGORA</a>
       </nav>
 
@@ -743,19 +806,19 @@
   <section class="hero" id="inicio">
     <div class="conteudo hero__conteudo">
       <div class="hero__texto">
-        <div class="hero__selo">Educação, inclusão e inovação com presença forte</div>
+        <div class="hero__selo">Tecnologia social para educação, inclusão e decisão inteligente</div>
 
         <h1 class="hero__titulo">
-          tecnologia social com <span class="destaque">cara de futuro</span>
+          Asa Cívica
         </h1>
 
         <p class="hero__descricao">
-          A ASA CÍVICA cria soluções digitais para educação e impacto social com identidade visual marcante, linguagem moderna e propostas que conectam comunidades, instituições e dados.
+          A ASA CÍVICA desenvolve soluções que aproximam famílias, escolas, gestores e instituições por meio de tecnologia acessível, inteligência de dados e experiência digital. Com o ecossistema MapEdu+, transformamos informação em inclusão, visibilidade institucional e tomada de decisão mais estratégica.
         </p>
 
         <div class="hero__acoes">
-          <a class="botao-principal" href="#projetos">VER PROJETOS</a>
-          <a class="botao-secundario" href="#sobre">CONHECER A MARCA</a>
+          <a class="botao-principal" href="#projetos">CONHECER O ECOSSISTEMA</a>
+          <a class="botao-secundario" href="#contato">FALAR COM A ASA CÍVICA</a>
         </div>
       </div>
     </div>
@@ -764,10 +827,10 @@
   <section class="destaque-flutuante">
     <div class="conteudo">
       <div class="destaque-flutuante__caixa">
-        <div class="destaque-flutuante__kicker">DESTAQUE</div>
-        <h2 class="destaque-flutuante__titulo">Tecnologia que aproxima educação, inclusão e decisão estratégica</h2>
+        <div class="destaque-flutuante__kicker">ECOSSISTEMA MAPEDU+</div>
+        <h2 class="destaque-flutuante__titulo">Uma solução que nasce da inclusão e evolui para inteligência educacional</h2>
         <p class="destaque-flutuante__texto">
-          A ASA CÍVICA combina design, dados e inovação aplicada para construir experiências mais úteis, mais humanas e mais fortes visualmente.
+          O MapEdu+ foi criado para facilitar o encontro entre famílias e instituições de ensino com práticas inclusivas, enquanto o MapEdu+Dados amplia esse potencial ao oferecer gestão, indicadores, relatórios e apoio analítico para escolas, secretarias e prefeituras. Juntos, formam uma base sólida para inovação educacional com propósito social.
         </p>
       </div>
     </div>
@@ -777,27 +840,27 @@
     <div class="conteudo">
       <div class="atalhos__grade">
         <article class="atalho">
-          <div class="atalho__icone">🚀</div>
-          <h3>Inovação aplicada</h3>
-          <p>Soluções com linguagem moderna e posicionamento mais forte de marca.</p>
+          <div class="atalho__icone">🏫</div>
+          <h3>Inclusão educacional</h3>
+          <p>Plataforma voltada à aproximação entre famílias, alunos e escolas com informações claras sobre acessibilidade, estrutura, profissionais e práticas inclusivas.</p>
         </article>
 
         <article class="atalho">
-          <div class="atalho__icone">📚</div>
-          <h3>Educação inclusiva</h3>
-          <p>Produtos digitais pensados para ampliar acesso, visibilidade e apoio real.</p>
+          <div class="atalho__icone">🔎</div>
+          <h3>Visibilidade institucional</h3>
+          <p>As instituições podem apresentar seus diferenciais pedagógicos, recursos de inclusão, infraestrutura, contatos e projetos de forma organizada, transparente e acessível.</p>
         </article>
 
         <article class="atalho">
           <div class="atalho__icone">📊</div>
-          <h3>Dados com propósito</h3>
-          <p>Informações organizadas para fortalecer decisões de famílias e gestores.</p>
+          <h3>Gestão orientada por dados</h3>
+          <p>O MapEdu+Dados centraliza informações, fortalece relatórios, organiza patrimônio educacional e oferece indicadores para apoiar decisões mais eficientes.</p>
         </article>
 
         <article class="atalho">
-          <div class="atalho__icone">🤝</div>
-          <h3>Parcerias estratégicas</h3>
-          <p>Conexão entre instituições, comunidades e tecnologia com impacto social.</p>
+          <div class="atalho__icone">🚀</div>
+          <h3>Potencial de escala</h3>
+          <p>A proposta foi desenhada para crescer com parcerias estratégicas, integração institucional, novas funcionalidades e expansão para redes públicas e privadas de ensino.</p>
         </article>
       </div>
     </div>
@@ -808,21 +871,24 @@
       <div class="bloco">
         <h2 class="titulo-secao">sobre a asa cívica</h2>
         <p class="subtitulo-secao">
-          A ASA CÍVICA nasce com a proposta de unir tecnologia, design e impacto social em produtos digitais capazes de fortalecer a educação e ampliar experiências inclusivas.
+          A ASA CÍVICA é uma iniciativa de tecnologia social voltada ao desenvolvimento de soluções digitais para educação, inclusão e transformação institucional. Nossa atuação combina sensibilidade humana, visão estratégica e construção tecnológica para responder a desafios reais do ecossistema educacional.
+        </p>
+        <p class="subtitulo-secao" style="margin-top:-1rem;">
+          Acreditamos que informação acessível, organização de dados e visibilidade institucional podem gerar impactos concretos para famílias, estudantes, escolas, gestores e poder público. Por isso, desenvolvemos produtos com foco em usabilidade, acessibilidade, valor público e potencial de crescimento sustentável.
         </p>
 
         <ul class="lista-valores">
           <li>
             <span class="check">✓</span>
-            <span><strong>Inovação real:</strong> não é só estética; é solução com utilidade e presença.</span>
+            <span><strong>Inovação com propósito:</strong> criamos soluções que nascem de problemas reais e buscam impacto mensurável.</span>
           </li>
           <li>
             <span class="check">✓</span>
-            <span><strong>Identidade forte:</strong> visual marcante, mais humano e menos genérico.</span>
+            <span><strong>Inclusão como estrutura:</strong> acessibilidade, acolhimento e clareza informacional não são complementos; são parte central do produto.</span>
           </li>
           <li>
             <span class="check">✓</span>
-            <span><strong>Inclusão estratégica:</strong> tecnologia construída para aproximar pessoas e oportunidades.</span>
+            <span><strong>Tecnologia para decisão:</strong> transformamos dados, processos e experiências em instrumentos de melhoria educacional e institucional.</span>
           </li>
         </ul>
       </div>
@@ -830,17 +896,17 @@
       <div class="coluna-lateral">
         <div class="caixa-lateral">
           <h3>Missão</h3>
-          <p>Transformar tecnologia em valor social com produtos úteis, modernos e acessíveis.</p>
+          <p>Desenvolver soluções digitais que fortaleçam a inclusão educacional, ampliem a transparência institucional e apoiem decisões mais inteligentes no setor educacional.</p>
         </div>
 
         <div class="caixa-lateral">
           <h3>Visão</h3>
-          <p>Ser referência em tecnologia social com posicionamento visual forte e profissional.</p>
+          <p>Ser referência em tecnologia social aplicada à educação, conectando inovação, acessibilidade e inteligência de dados em produtos de alto valor público e comercial.</p>
         </div>
 
         <div class="caixa-lateral">
           <h3>Diferencial</h3>
-          <p>Uma marca que parece viva, criativa e séria ao mesmo tempo.</p>
+          <p>Unimos impacto social, posicionamento institucional, experiência digital e potencial de escalabilidade em um ecossistema com aplicações para famílias, escolas e gestão pública.</p>
         </div>
       </div>
     </div>
@@ -850,21 +916,24 @@
     <div class="conteudo">
       <h2 class="titulo-secao">projetos</h2>
       <p class="subtitulo-secao">
-        Iniciativas que conectam informação, inclusão e inteligência educacional.
+        Conheça as soluções que estruturam o ecossistema ASA CÍVICA para inclusão, gestão e transformação educacional.
       </p>
 
       <div class="grade-projetos">
         <article class="cartao">
           <div class="cartao__imagem">
-            <img src="Imagens/MAPEDU.png" alt="Projeto MapEdu+Inclusão">
+            <img src="Imagens/MAPEDU.png" alt="Projeto MapEdu+">
           </div>
           <div class="cartao__corpo">
-            <span class="etiqueta">Educação inclusiva</span>
-            <h3>MapEdu+Inclusão</h3>
+            <span class="etiqueta">Inclusão educacional</span>
+            <h3>MapEdu+</h3>
             <p>
-              Plataforma colaborativa que ajuda a mapear instituições de ensino com práticas e estruturas voltadas à inclusão.
+              O MapEdu+ é uma plataforma criada para conectar famílias, alunos e instituições de ensino em um ambiente digital acessível, intuitivo e informativo. A solução facilita a busca por escolas com recursos inclusivos, estrutura compatível, profissionais especializados e propostas pedagógicas alinhadas às necessidades de cada estudante.
             </p>
-            <a href="#contato">Falar sobre parceria →</a>
+            <p style="margin-top:.9rem;">
+              Por meio de filtros como localização, escolaridade e necessidades específicas, a plataforma torna a escolha escolar mais consciente, prática e transparente. Além disso, oferece perfis institucionais completos, com fotos, contatos, indicadores de acessibilidade, equipe de apoio e apresentação dos diferenciais da escola.
+            </p>
+            <a href="#contato">Saiba mais sobre o MapEdu+ →</a>
           </div>
         </article>
 
@@ -873,12 +942,15 @@
             <img src="Imagens/MAPEDUDADOS.jpeg" alt="Projeto MapEdu+Dados">
           </div>
           <div class="cartao__corpo">
-            <span class="etiqueta">Dados educacionais</span>
+            <span class="etiqueta">Gestão educacional e inteligência de dados</span>
             <h3>MapEdu+Dados</h3>
             <p>
-              Plataforma para apoio à gestão educacional com organização de indicadores e leitura estratégica de dados.
+              O MapEdu+Dados é o módulo voltado a gestores, secretarias de educação e prefeituras. Sua proposta é centralizar informações escolares, organizar itens e patrimônio, gerar relatórios estratégicos e transformar dados em decisões mais precisas para políticas educacionais e ações de inclusão.
             </p>
-            <a href="#contato">Falar sobre parceria →</a>
+            <p style="margin-top:.9rem;">
+              Com integração a painéis analíticos e potencial de apoio por inteligência artificial, a solução permite visualizar estoques, indicadores de acessibilidade, distribuição de recursos, infraestrutura e demandas regionais, fortalecendo o planejamento técnico e a eficiência da gestão pública.
+            </p>
+            <a href="#contato">Saiba mais sobre o MapEdu+Dados →</a>
           </div>
         </article>
       </div>
@@ -887,29 +959,53 @@
 
   <section class="secao" id="servicos">
     <div class="conteudo">
-      <h2 class="titulo-secao">serviços</h2>
+      <h2 class="titulo-secao">soluções e frentes de atuação</h2>
       <p class="subtitulo-secao">
-        O que a ASA CÍVICA pode construir junto com sua instituição.
+        A ASA CÍVICA atua com produtos e serviços orientados à educação, inclusão, dados e fortalecimento institucional.
       </p>
 
       <div class="grade-servicos">
         <article class="servico">
           <div class="servico__icone">💻</div>
-          <h3>Desenvolvimento de plataformas</h3>
-          <p>Soluções web modernas, funcionais e visualmente mais fortes.</p>
+          <h3>Plataformas digitais com propósito</h3>
+          <p>Desenvolvemos soluções digitais voltadas à educação e à inclusão, com foco em navegação intuitiva, acessibilidade, clareza visual e valor institucional.</p>
+        </article>
+
+        <article class="servico">
+          <div class="servico__icone">📍</div>
+          <h3>Mapeamento e visibilidade educacional</h3>
+          <p>Estruturamos ambientes digitais que aproximam famílias e instituições, fortalecendo a descoberta de escolas, recursos e práticas inclusivas.</p>
         </article>
 
         <article class="servico">
           <div class="servico__icone">📈</div>
-          <h3>Dados e indicadores</h3>
-          <p>Estruturação de informação para apoiar decisões mais inteligentes e acessíveis.</p>
+          <h3>Indicadores e apoio à decisão</h3>
+          <p>Transformamos dados educacionais em relatórios, painéis e inteligência operacional para gestores, secretarias e parceiros institucionais.</p>
         </article>
+      </div>
+    </div>
+  </section>
 
-        <article class="servico">
-          <div class="servico__icone">✨</div>
-          <h3>Experiência e identidade</h3>
-          <p>Design institucional com mais presença, coerência visual e personalidade.</p>
-        </article>
+  <section class="secao investidores" id="investidores">
+    <div class="conteudo investidores__grade">
+      <div>
+        <h2 class="titulo-secao">expansão, investidores e parcerias estratégicas</h2>
+        <p class="subtitulo-secao">
+          A ASA CÍVICA está posicionada para avançar como uma startup de tecnologia social com potencial de escalabilidade, impacto público e aderência a demandas reais do setor educacional. O ecossistema MapEdu+ reúne proposta de valor clara, problema concreto, aplicabilidade institucional e espaço para crescimento por meio de parcerias, contratos, integração com redes educacionais e desenvolvimento de novas funcionalidades.
+        </p>
+        <p class="subtitulo-secao" style="margin-top:-1rem;">
+          Buscamos conexão com investidores, aceleradoras, organizações parceiras e lideranças institucionais que desejem apoiar uma solução capaz de unir inclusão educacional, inteligência de dados e modernização da gestão. Nossa visão é consolidar um ecossistema sustentável, tecnicamente robusto e comercialmente relevante.
+        </p>
+      </div>
+
+      <div class="investidores__card">
+        <h3>Por que investir ou se conectar com a ASA CÍVICA</h3>
+        <ul class="investidores__lista">
+          <li>Atua sobre dores reais do mercado educacional, especialmente inclusão, visibilidade escolar e organização de dados.</li>
+          <li>Possui proposta híbrida, com valor para famílias, instituições de ensino, secretarias e prefeituras.</li>
+          <li>Apresenta potencial de expansão por licenciamento, parcerias institucionais, módulos complementares e integrações estratégicas.</li>
+          <li>Combina impacto social, narrativa forte de marca, aplicabilidade pública e possibilidade de crescimento comercial.</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -919,7 +1015,7 @@
       <div class="contato-card">
         <h2 class="titulo-secao" style="margin-bottom:.6rem;">contato</h2>
         <p class="subtitulo-secao" style="margin-bottom:1rem;">
-          Entre em contato para apresentar uma ideia, uma parceria ou uma necessidade institucional.
+          Estamos abertos a conversas com parceiros, investidores, instituições de ensino, secretarias, aceleradoras e organizações interessadas em fortalecer o ecossistema MapEdu+.
         </p>
 
         <a class="email-box" href="mailto:asacivica@gmail.com">asacivica@gmail.com</a>
@@ -931,9 +1027,9 @@
       </div>
 
       <div class="contato-card">
-        <h3 style="margin-top:0; color:var(--texto-escuro);">Presença institucional</h3>
+        <h3 style="margin-top:0; color:var(--texto-escuro);">Conexões estratégicas</h3>
         <p>
-          Uma homepage com banner forte, composição mais editorial e blocos visuais que parecem de marca real.
+          A ASA CÍVICA busca construir relações de longo prazo com parceiros capazes de contribuir para validação, expansão, investimento, implementação institucional e fortalecimento comercial do ecossistema.
         </p>
 
         <div class="caixa-lateral" style="margin-top:1rem;">
@@ -954,7 +1050,7 @@
             <span>Tecnologia social</span>
           </span>
         </div>
-        <p>Transformando educação e inclusão com tecnologia, presença visual e identidade mais forte.</p>
+        <p>Transformando educação, inclusão e gestão educacional por meio de tecnologia social, inteligência de dados e visão de futuro.</p>
       </div>
 
       <div>
@@ -962,7 +1058,8 @@
         <ul class="lista-simples">
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#servicos">Soluções</a></li>
+          <li><a href="#investidores">Expansão</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </div>
@@ -1003,4 +1100,3 @@
   </script>
 </body>
 </html>
-
