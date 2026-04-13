@@ -50,7 +50,7 @@
       overflow-x: hidden;
     }
 
-    img {
+    img, video {
       max-width: 100%;
       display: block;
     }
@@ -194,6 +194,14 @@
       padding: 4rem 0 10rem;
     }
 
+    .hero__grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 2.4rem;
+      align-items: center;
+      width: 100%;
+    }
+
     .hero__texto {
       max-width: 760px;
       color: white;
@@ -275,6 +283,74 @@
 
     .botao-secundario:hover {
       background: rgba(255,255,255,0.18);
+    }
+
+    .hero__midia {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+    }
+
+    .video-card {
+      position: relative;
+      width: min(100%, 450px);
+      padding: 14px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.28);
+      border-radius: 28px;
+      overflow: hidden;
+    }
+
+    .video-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(242,201,76,0.90), rgba(15,76,129,0.90));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.video-card::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 26px;
+  background: rgba(8, 16, 28, 0.82);
+  z-index: 0;
+}
+
+.video-card__tag,
+.video-card__video {
+  position: relative;
+  z-index: 1;
+}
+
+    .video-card__tag {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      z-index: 2;
+      padding: .45rem .8rem;
+      border-radius: 999px;
+      background: rgba(11,20,34,0.78);
+      color: #fff;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .video-card__video {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      background: #000;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
     }
 
     .destaque-flutuante {
@@ -698,8 +774,17 @@
       .sobre,
       .contato,
       .grade-servicos,
-      .investidores__grade {
+      .investidores__grade,
+      .hero__grid {
         grid-template-columns: 1fr;
+      }
+
+      .hero__midia {
+        justify-content: flex-start;
+      }
+
+      .video-card {
+        width: min(100%, 520px);
       }
     }
 
@@ -768,6 +853,15 @@
       .hero__conteudo {
         padding-bottom: 6rem;
       }
+
+      .video-card {
+        padding: 10px;
+        border-radius: 22px;
+      }
+
+      .video-card__video {
+        border-radius: 16px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -805,20 +899,32 @@
 
   <section class="hero" id="inicio">
     <div class="conteudo hero__conteudo">
-      <div class="hero__texto">
-        <div class="hero__selo">Tecnologia social para educação, inclusão e decisão inteligente</div>
+      <div class="hero__grid">
+        <div class="hero__texto">
+          <div class="hero__selo">Tecnologia social para educação, inclusão e decisão inteligente</div>
 
-        <h1 class="hero__titulo">
-          Asa Cívica
-        </h1>
+          <h1 class="hero__titulo">
+            Asa Cívica
+          </h1>
 
-        <p class="hero__descricao">
-          A ASA CÍVICA desenvolve soluções que aproximam famílias, escolas, gestores e instituições por meio de tecnologia acessível, inteligência de dados e experiência digital. Com o ecossistema MapEdu+, transformamos informação em inclusão, visibilidade institucional e tomada de decisão mais estratégica.
-        </p>
+          <p class="hero__descricao">
+            A ASA CÍVICA desenvolve soluções que aproximam famílias, escolas, gestores e instituições por meio de tecnologia acessível, inteligência de dados e experiência digital. Com o ecossistema MapEdu+, transformamos informação em inclusão, visibilidade institucional e tomada de decisão mais estratégica.
+          </p>
 
-        <div class="hero__acoes">
-          <a class="botao-principal" href="#projetos">CONHECER O ECOSSISTEMA</a>
-          <a class="botao-secundario" href="#contato">FALAR COM A ASA CÍVICA</a>
+          <div class="hero__acoes">
+            <a class="botao-principal" href="#projetos">CONHECER O ECOSSISTEMA</a>
+            <a class="botao-secundario" href="#contato">FALAR COM A ASA CÍVICA</a>
+          </div>
+        </div>
+
+        <div class="hero__midia">
+          <div class="video-card">
+            <div class="video-card__tag">Asa Cívica</div>
+            <video class="video-card__video" autoplay muted loop playsinline preload="auto">
+              <source src="videos/intro_logo.mp4" type="video/mp4">
+              Seu navegador não suporta vídeo HTML5.
+            </video>
+          </div>
         </div>
       </div>
     </div>
