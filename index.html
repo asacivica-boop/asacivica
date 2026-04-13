@@ -60,6 +60,10 @@
       text-decoration: none;
     }
 
+    button {
+      font-family: inherit;
+    }
+
     .conteudo {
       width: min(calc(100% - 32px), var(--largura));
       margin: 0 auto;
@@ -131,6 +135,7 @@
       padding: .9rem 1rem;
       border-radius: var(--pill);
       transition: var(--transicao);
+      cursor: pointer;
     }
 
     .link-menu:hover {
@@ -767,6 +772,155 @@
       color: var(--dourado-2);
     }
 
+    .modal-rede {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(3, 8, 18, 0.72);
+      backdrop-filter: blur(10px);
+    }
+
+    .modal-rede.ativo {
+      display: flex;
+    }
+
+    .modal-rede__painel {
+      position: relative;
+      width: min(1120px, 100%);
+      max-height: 90vh;
+      overflow-y: auto;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border: 1px solid rgba(15, 76, 129, 0.12);
+      box-shadow: 0 30px 80px rgba(15, 23, 42, 0.28);
+      border-radius: 30px;
+      padding: 2rem;
+    }
+
+    .modal-rede__fechar {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 46px;
+      height: 46px;
+      border: 0;
+      border-radius: 999px;
+      cursor: pointer;
+      background: #0f172a;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 900;
+      transition: var(--transicao);
+    }
+
+    .modal-rede__fechar:hover {
+      transform: scale(1.05);
+      background: var(--dourado-1);
+      color: #111827;
+    }
+
+    .modal-rede__topo {
+      padding-right: 64px;
+      margin-bottom: 1.8rem;
+    }
+
+    .modal-rede__kicker {
+      display: inline-block;
+      font-family: "Bebas Neue", sans-serif;
+      letter-spacing: .08em;
+      font-size: 1rem;
+      color: var(--dourado-1);
+      margin-bottom: .45rem;
+    }
+
+    .modal-rede__titulo {
+      margin: 0 0 .6rem;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: .95;
+      color: var(--texto-escuro);
+      font-family: "Bebas Neue", sans-serif;
+      letter-spacing: .03em;
+    }
+
+    .modal-rede__texto {
+      margin: 0;
+      max-width: 70ch;
+      color: #64748b;
+      line-height: 1.75;
+    }
+
+    .modal-rede__grade {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .modal-rede__secao {
+      background: white;
+      border: 1px solid var(--borda);
+      box-shadow: var(--sombra-1);
+      border-radius: 22px;
+      padding: 1.4rem;
+    }
+
+    .modal-rede__secao h3 {
+      margin: 0 0 1rem;
+      color: var(--texto-escuro);
+      font-size: 1.15rem;
+    }
+
+    .modal-rede__cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .modal-rede__item {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border: 1px solid rgba(15, 76, 129, 0.10);
+      border-radius: 20px;
+      padding: 1rem;
+      min-height: 170px;
+    }
+
+    .modal-rede__avatar {
+      width: 58px;
+      height: 58px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      margin-bottom: .8rem;
+      background: linear-gradient(135deg, var(--azul-2), var(--dourado-1));
+      color: white;
+      font-weight: 900;
+      font-size: 1rem;
+      box-shadow: 0 12px 24px rgba(15, 76, 129, 0.16);
+    }
+
+    .modal-rede__item strong {
+      display: block;
+      color: var(--texto-escuro);
+      font-size: 1rem;
+      margin-bottom: .2rem;
+    }
+
+    .modal-rede__cargo {
+      display: block;
+      color: var(--azul-2);
+      font-size: .9rem;
+      font-weight: 700;
+      margin-bottom: .55rem;
+    }
+
+    .modal-rede__item p {
+      margin: 0;
+      color: #64748b;
+      line-height: 1.65;
+      font-size: .94rem;
+    }
+
     @media (max-width: 1100px) {
       .atalhos__grade {
         grid-template-columns: repeat(2, 1fr);
@@ -826,6 +980,10 @@
       .destaque-flutuante {
         margin-top: -50px;
       }
+
+      .modal-rede__cards {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     @media (max-width: 700px) {
@@ -863,6 +1021,23 @@
       .video-card__video {
         border-radius: 16px;
       }
+
+      .modal-rede {
+        padding: 14px;
+      }
+
+      .modal-rede__painel {
+        padding: 1.2rem;
+        border-radius: 22px;
+      }
+
+      .modal-rede__topo {
+        padding-right: 54px;
+      }
+
+      .modal-rede__cards {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -891,6 +1066,7 @@
         <a class="link-menu" href="#projetos">Projetos</a>
         <a class="link-menu" href="#servicos">Soluções</a>
         <a class="link-menu" href="#investidores">Expansão</a>
+        <a class="link-menu" href="#" id="abrir-modal-rede">Rede</a>
         <a class="botao-topo" href="#contato">FALAR AGORA</a>
       </nav>
 
@@ -1181,11 +1357,78 @@
     </div>
   </footer>
 
+  <div class="modal-rede" id="modal-rede" aria-hidden="true">
+    <div class="modal-rede__painel" role="dialog" aria-modal="true" aria-labelledby="modal-rede-titulo">
+      <button class="modal-rede__fechar" id="fechar-modal-rede" aria-label="Fechar">✕</button>
+
+      <div class="modal-rede__topo">
+        <span class="modal-rede__kicker">CONEXÕES ESTRATÉGICAS</span>
+        <h2 class="modal-rede__titulo" id="modal-rede-titulo">Sócios, parceiros e equipe</h2>
+        <p class="modal-rede__texto">
+          Conheça a rede que fortalece a ASA CÍVICA por meio de visão estratégica, colaboração institucional, inovação e capacidade de execução.
+        </p>
+      </div>
+
+      <div class="modal-rede__grade">
+        <section class="modal-rede__secao">
+          <h3>Sócios</h3>
+          <div class="modal-rede__cards">
+
+<article class="modal-rede__item">
+  <div class="modal-rede__avatar">NW</div>
+  <strong>Nataniel Wilson De Oliveira Andrade</strong>
+  <span class="modal-rede__cargo">Fundador e CEO</span>
+  <p>Fundador da ASA CÍVICA e responsável pela criação dos projetos e aplicações da startup. Graduando em Sistemas para Internet e técnico em Informática, possui experiência em robótica, projetos científicos e inovação educacional, com participação em competições como a OBR, apresentações de trabalhos na 4ª Semana Nacional de Educação Profissional e Tecnológica representando o IFRO Campus Porto Velho Zona Norte, além de integrar projeto com publicação no CONAPE sobre robôs móveis com visão computacional. Também atuou em atividades de inclusão educacional na sala AEE da Escola Barão dos Solimões, reforçando sua conexão entre tecnologia, educação e impacto social.</p>
+
+  <div class="modal-rede__links">
+    <a href="mailto:natanielwilsonwork@gmail.com">E-mail</a>
+    <a href="https://www.instagram.com/nataniel_wilson_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://www.linkedin.com/in/nataniel-wilson-26b935335/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</article>
+            
+          </div>
+        </section>
+
+        <section class="modal-rede__secao">
+          <h3>Parceiros</h3>
+          <div class="modal-rede__cards">
+            <article class="modal-rede__item">
+              <div class="modal-rede__avatar">P1</div>
+              <strong>Parceiro institucional</strong>
+              <span class="modal-rede__cargo">Atualização em breve</span>
+              <p>Atualização em breve</p>
+            </article>
+       
+          </div>
+        </section>
+
+        <section class="modal-rede__secao">
+          <h3>Equipe</h3>
+          <div class="modal-rede__cards">
+            <article class="modal-rede__item">
+              <div class="modal-rede__avatar">EQ</div>
+              <strong>Atualização em breve</strong>
+              <span class="modal-rede__cargo">------</span>
+              <p>atualização em breve</p>
+            </article>
+
+            
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
   <script>
     (function () {
       const botao = document.getElementById("abrir-menu");
       const nav = document.querySelector(".menu-navegacao");
       const video = document.getElementById("intro-video");
+
+      const modal = document.getElementById("modal-rede");
+      const abrir1 = document.getElementById("abrir-modal-rede");
+      const fechar = document.getElementById("fechar-modal-rede");
 
       function alternar() {
         if (!nav) return;
@@ -1218,6 +1461,21 @@
         }
       }
 
+      function abrirModal(event) {
+        if (event) event.preventDefault();
+        if (!modal) return;
+        modal.classList.add("ativo");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function fecharModal() {
+        if (!modal) return;
+        modal.classList.remove("ativo");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
       if (botao) botao.addEventListener("click", alternar);
       window.addEventListener("resize", ajustar);
       window.addEventListener("load", iniciarVideo);
@@ -1226,6 +1484,23 @@
         video.addEventListener("canplay", iniciarVideo);
         video.addEventListener("loadeddata", iniciarVideo);
       }
+
+      if (abrir1) abrir1.addEventListener("click", abrirModal);
+      if (fechar) fechar.addEventListener("click", fecharModal);
+
+      if (modal) {
+        modal.addEventListener("click", function (event) {
+          if (event.target === modal) {
+            fecharModal();
+          }
+        });
+      }
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          fecharModal();
+        }
+      });
 
       ajustar();
     })();
