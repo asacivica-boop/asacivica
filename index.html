@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>ASA CÍVICA | Startup Asa Cívica | MapEdu+ | Nataniel Wilson De Oliveira Andrade</title>
+<title>ASA CÍVICA — software de interesse público em Porto Velho</title>
 
-<meta name="description" content="A ASA CÍVICA é uma startup de tecnologia social voltada à educação inclusiva, inovação educacional e gestão educacional. Conheça o MapEdu+ e os projetos idealizados por Nataniel Wilson De Oliveira Andrade.">
+<meta name="description" content="A ASA CÍVICA desenvolve o MapEdu+, o MapEdu+Dados e o SAMAÚMA: sistemas de educação inclusiva e de rastreabilidade de resíduos, feitos em Porto Velho, Rondônia.">
 
 <link rel="canonical" href="https://asacivica.com.br/">
 
@@ -14,14 +14,14 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="ASA CÍVICA | Startup Asa Cívica | MapEdu+">
-<meta property="og:description" content="Startup de tecnologia social com foco em educação inclusiva, inovação educacional e gestão educacional por meio do ecossistema MapEdu+.">
+<meta property="og:title" content="ASA CÍVICA — software de interesse público em Porto Velho">
+<meta property="og:description" content="A ASA CÍVICA desenvolve o MapEdu+, o MapEdu+Dados e o SAMAÚMA: sistemas de educação inclusiva e de rastreabilidade de resíduos, feitos em Porto Velho, Rondônia.">
 <meta property="og:url" content="https://asacivica.com.br/">
 <meta property="og:image" content="https://asacivica.com.br/Imagens/ASA%20C%C3%8DVICA.png">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ASA CÍVICA | Startup Asa Cívica | MapEdu+">
-<meta name="twitter:description" content="Conheça a ASA CÍVICA, o MapEdu+ e soluções voltadas à educação inclusiva, inovação educacional e gestão educacional.">
+<meta name="twitter:title" content="ASA CÍVICA — software de interesse público em Porto Velho">
+<meta name="twitter:description" content="A ASA CÍVICA desenvolve o MapEdu+, o MapEdu+Dados e o SAMAÚMA: sistemas de educação inclusiva e de rastreabilidade de resíduos, feitos em Porto Velho, Rondônia.">
 <meta name="twitter:image" content="https://asacivica.com.br/Imagens/ASA%20C%C3%8DVICA.png">
 
 <script type="application/ld+json">
@@ -35,11 +35,12 @@
     "Asa Civica",
     "Startup Asa Cívica",
     "MapEdu+",
-    "MapEdu"
+    "MapEdu+Dados",
+    "SAMAÚMA"
   ],
   "url": "https://asacivica.com.br/",
   "logo": "https://asacivica.com.br/Imagens/ASA%20C%C3%8DVICA.png",
-  "description": "Startup de tecnologia social voltada à educação inclusiva, inovação educacional e gestão educacional por meio do ecossistema MapEdu+.",
+  "description": "A ASA CÍVICA desenvolve o MapEdu+, o MapEdu+Dados e o SAMAÚMA: sistemas de educação inclusiva e de rastreabilidade de resíduos, feitos em Porto Velho, Rondônia.",
   "founder": {
     "@type": "Person",
     "name": "Nataniel Wilson De Oliveira Andrade",
@@ -474,7 +475,9 @@
       place-items: center;
       background: linear-gradient(135deg, rgba(214,164,25,0.14), rgba(15,76,129,0.12));
       color: var(--azul-2);
-      font-size: 1.2rem;
+      font-size: .95rem;
+      font-weight: 800;
+      letter-spacing: .06em;
       margin-bottom: .9rem;
     }
 
@@ -617,6 +620,30 @@
       padding: 1.3rem;
     }
 
+    .cartao--destaque {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      align-items: stretch;
+    }
+
+    .cartao--destaque .cartao__imagem {
+      height: auto;
+      min-height: 250px;
+      border-bottom: none;
+      border-right: 1px solid var(--borda);
+    }
+
+    .cartao--destaque .cartao__corpo {
+      padding: 1.6rem 1.8rem;
+      align-self: center;
+    }
+
+    .cartao--destaque .cartao__imagem img {
+      max-height: 280px;
+      width: 100%;
+    }
+
     .etiqueta {
       display: inline-block;
       background: rgba(214,164,25,0.14);
@@ -671,7 +698,9 @@
       place-items: center;
       background: linear-gradient(135deg, var(--azul-2), var(--dourado-1));
       color: white;
-      font-size: 1.2rem;
+      font-size: .95rem;
+      font-weight: 800;
+      letter-spacing: .06em;
       margin-bottom: .85rem;
     }
 
@@ -1040,6 +1069,21 @@
         grid-template-columns: 1fr;
       }
 
+      .cartao--destaque {
+        grid-template-columns: 1fr;
+      }
+
+      .cartao--destaque .cartao__imagem {
+        height: 250px;
+        min-height: 0;
+        border-right: none;
+        border-bottom: 1px solid var(--borda);
+      }
+
+      .cartao--destaque .cartao__corpo {
+        padding: 1.3rem;
+      }
+
       .hero__acoes,
       .acoes-contato {
         flex-direction: column;
@@ -1111,7 +1155,7 @@
       <nav class="menu-navegacao">
         <a class="link-menu" href="#sobre">Sobre</a>
         <a class="link-menu" href="#projetos">Projetos</a>
-        <a class="link-menu" href="#servicos">Soluções</a>
+        <a class="link-menu" href="#servicos">Serviços</a>
         <a class="link-menu" href="#investidores">Expansão</a>
         <a class="link-menu" href="#" id="abrir-modal-rede">Rede</a>
         <a class="botao-topo" href="#contato">FALAR AGORA</a>
@@ -1125,18 +1169,18 @@
     <div class="conteudo hero__conteudo">
       <div class="hero__grid">
         <div class="hero__texto">
-          <div class="hero__selo">Tecnologia social para educação, inclusão e decisão inteligente</div>
+          <div class="hero__selo">Software de interesse público · Porto Velho, Rondônia</div>
 
           <h1 class="hero__titulo">
             Asa Cívica
           </h1>
 
           <p class="hero__descricao">
-            A ASA CÍVICA desenvolve soluções que aproximam famílias, escolas, gestores e instituições por meio de tecnologia acessível, inteligência de dados e experiência digital. Com o ecossistema MapEdu+, transformamos informação em inclusão, visibilidade institucional e tomada de decisão mais estratégica.
+            A ASA CÍVICA escreve software para dois problemas que Porto Velho ainda resolve no telefone e no papel: descobrir qual escola atende de verdade uma criança com deficiência, e provar para onde vai o resíduo de quem produz muito lixo. São três sistemas, e todos partem da mesma teimosia — informação que ninguém consegue conferir não serve para decidir nada.
           </p>
 
           <div class="hero__acoes">
-            <a class="botao-principal" href="#projetos">CONHECER O ECOSSISTEMA</a>
+            <a class="botao-principal" href="#projetos">VER OS TRÊS SISTEMAS</a>
             <a class="botao-secundario" href="#contato">FALAR COM A ASA CÍVICA</a>
           </div>
         </div>
@@ -1157,10 +1201,10 @@
   <section class="destaque-flutuante">
     <div class="conteudo">
       <div class="destaque-flutuante__caixa">
-        <div class="destaque-flutuante__kicker">ECOSSISTEMA MAPEDU+</div>
-        <h2 class="destaque-flutuante__titulo">Uma solução que nasce da inclusão e evolui para inteligência educacional</h2>
+        <div class="destaque-flutuante__kicker">EDUCAÇÃO E RESÍDUOS</div>
+        <h2 class="destaque-flutuante__titulo">O que a gente faz, sem rodeio</h2>
         <p class="destaque-flutuante__texto">
-          O MapEdu+ foi criado para facilitar o encontro entre famílias e instituições de ensino com práticas inclusivas, enquanto o MapEdu+Dados amplia esse potencial ao oferecer gestão, indicadores, relatórios e apoio analítico para escolas, secretarias e prefeituras. Juntos, formam uma base sólida para inovação educacional com propósito social.
+          O MapEdu+ mostra à família quais escolas têm rampa, profissional de apoio e prática de inclusão — coisa que hoje se descobre ligando de escola em escola. O MapEdu+Dados entrega essa mesma base organizada para quem administra a rede. E o SAMAÚMA acompanha o resíduo de um estabelecimento até a balança do destino, com comprovante que qualquer pessoa confere pelo celular.
         </p>
       </div>
     </div>
@@ -1170,27 +1214,27 @@
     <div class="conteudo">
       <div class="atalhos__grade">
         <article class="atalho">
-          <div class="atalho__icone">🏫</div>
-          <h3>Inclusão educacional</h3>
-          <p>Plataforma voltada à aproximação entre famílias, alunos e escolas com informações claras sobre acessibilidade, estrutura, profissionais e práticas inclusivas.</p>
+          <div class="atalho__icone">01</div>
+          <h3>Para a família</h3>
+          <p>Procurar escola para um filho com deficiência costuma virar uma maratona de telefonemas. O MapEdu+ reúne num lugar só o que a família precisa saber antes de visitar: estrutura, profissionais de apoio e o que a escola de fato pratica.</p>
         </article>
 
         <article class="atalho">
-          <div class="atalho__icone">🔎</div>
-          <h3>Visibilidade institucional</h3>
-          <p>As instituições podem apresentar seus diferenciais pedagógicos, recursos de inclusão, infraestrutura, contatos e projetos de forma organizada, transparente e acessível.</p>
+          <div class="atalho__icone">02</div>
+          <h3>Para a escola</h3>
+          <p>Escola que investiu em acessibilidade quase nunca tem onde mostrar isso. O perfil institucional reúne fotos, contatos, equipe de apoio e recursos de inclusão, e fica aberto para quem procura.</p>
         </article>
 
         <article class="atalho">
-          <div class="atalho__icone">📊</div>
-          <h3>Gestão orientada por dados</h3>
-          <p>O MapEdu+Dados centraliza informações, fortalece relatórios, organiza patrimônio educacional e oferece indicadores para apoiar decisões mais eficientes.</p>
+          <div class="atalho__icone">03</div>
+          <h3>Para quem administra a rede</h3>
+          <p>Secretaria que não sabe onde está o patrimônio, quantas salas têm acessibilidade ou como os recursos estão distribuídos decide no escuro. O MapEdu+Dados organiza esse cadastro e o devolve em relatório.</p>
         </article>
 
         <article class="atalho">
-          <div class="atalho__icone">🚀</div>
-          <h3>Potencial de escala</h3>
-          <p>A proposta foi desenhada para crescer com parcerias estratégicas, integração institucional, novas funcionalidades e expansão para redes públicas e privadas de ensino.</p>
+          <div class="atalho__icone">04</div>
+          <h3>Para o resíduo da cidade</h3>
+          <p>Um decreto de 2018 proíbe grande gerador de usar a coleta pública, e desde então ninguém tem como verificar se a regra é cumprida. O SAMAÚMA registra cada carga até o destino e produz a prova que faltava.</p>
         </article>
       </div>
     </div>
@@ -1201,24 +1245,24 @@
       <div class="bloco">
         <h2 class="titulo-secao">sobre a asa cívica</h2>
         <p class="subtitulo-secao">
-          A ASA CÍVICA é uma iniciativa de tecnologia social voltada ao desenvolvimento de soluções digitais para educação, inclusão e transformação institucional. Nossa atuação combina sensibilidade humana, visão estratégica e construção tecnológica para responder a desafios reais do ecossistema educacional.
+          A ASA CÍVICA nasceu em Porto Velho, de uma constatação simples: quase toda decisão importante em educação e em meio ambiente é tomada com informação que ninguém consegue conferir. A escola diz que é inclusiva. O transportador diz que levou o resíduo para o lugar certo. Ninguém checa.
         </p>
         <p class="subtitulo-secao" style="margin-top:-1rem;">
-          Acreditamos que informação acessível, organização de dados e visibilidade institucional podem gerar impactos concretos para famílias, estudantes, escolas, gestores e poder público. Por isso, desenvolvemos produtos com foco em usabilidade, acessibilidade, valor público e potencial de crescimento sustentável.
+          Então a gente escreve sistemas que registram quem fez o quê, quando, e deixam isso aberto para conferência. Não é uma ideia bonita: é a diferença entre um número que se defende numa prestação de contas e um número que cai na primeira pergunta.
         </p>
 
         <ul class="lista-valores">
           <li>
             <span class="check">✓</span>
-            <span><strong>Inovação com propósito:</strong> criamos soluções que nascem de problemas reais e buscam impacto mensurável.</span>
+            <span><strong>O número tem que ter dono.</strong> Todo dado dos nossos sistemas registra quem o informou e quando. Dado sem autor é opinião.</span>
           </li>
           <li>
             <span class="check">✓</span>
-            <span><strong>Inclusão como estrutura:</strong> acessibilidade, acolhimento e clareza informacional não são complementos; são parte central do produto.</span>
+            <span><strong>Quem tem menos recurso não pode ser o mais exigido.</strong> No SAMAÚMA o catador registra a coleta sem precisar de celular próprio. No MapEdu+ a busca funciona em aparelho de entrada e conexão ruim.</span>
           </li>
           <li>
             <span class="check">✓</span>
-            <span><strong>Tecnologia para decisão:</strong> transformamos dados, processos e experiências em instrumentos de melhoria educacional e institucional.</span>
+            <span><strong>Nada é apagado.</strong> Correção entra como registro novo, com o valor anterior preservado ao lado. É o que separa histórico de versão conveniente.</span>
           </li>
         </ul>
       </div>
@@ -1226,17 +1270,17 @@
       <div class="coluna-lateral">
         <div class="caixa-lateral">
           <h3>Missão</h3>
-          <p>Desenvolver soluções digitais que fortaleçam a inclusão educacional, ampliem a transparência institucional e apoiem decisões mais inteligentes no setor educacional.</p>
+          <p>Fazer com que informação de interesse público — sobre escola, sobre resíduo, sobre gasto — possa ser conferida por quem ela afeta, e não apenas por quem a produz.</p>
         </div>
 
         <div class="caixa-lateral">
           <h3>Visão</h3>
-          <p>Ser referência em tecnologia social aplicada à educação, conectando inovação, acessibilidade e inteligência de dados em produtos de alto valor público e comercial.</p>
+          <p>Que os sistemas que fazemos em Rondônia sirvam de padrão para outros municípios do país, e que a origem amazônica seja a credencial, não a desculpa.</p>
         </div>
 
         <div class="caixa-lateral">
           <h3>Diferencial</h3>
-          <p>Unimos impacto social, posicionamento institucional, experiência digital e potencial de escalabilidade em um ecossistema com aplicações para famílias, escolas e gestão pública.</p>
+          <p>Somos cinco pessoas em Porto Velho que já entregaram sistema funcionando antes de existir contrato. Quem contrata a ASA CÍVICA vê o produto rodando na primeira reunião.</p>
         </div>
       </div>
     </div>
@@ -1246,7 +1290,7 @@
     <div class="conteudo">
       <h2 class="titulo-secao">projetos</h2>
       <p class="subtitulo-secao">
-        Conheça as soluções que estruturam o ecossistema ASA CÍVICA para inclusão, gestão e transformação educacional.
+        Três sistemas em desenvolvimento e uso. Dois em educação, um em resíduos sólidos.
       </p>
 
       <div class="grade-projetos">
@@ -1258,12 +1302,12 @@
             <span class="etiqueta">Inclusão educacional</span>
             <h3>MapEdu+</h3>
             <p>
-              O MapEdu+ é uma plataforma criada para conectar famílias, alunos e instituições de ensino em um ambiente digital acessível, intuitivo e informativo. A solução facilita a busca por escolas com recursos inclusivos, estrutura compatível, profissionais especializados e propostas pedagógicas alinhadas às necessidades de cada estudante.
+              Uma mãe que precisa matricular um filho autista em Porto Velho hoje faz o seguinte: liga para uma escola, pergunta se tem profissional de apoio, ouve um talvez, liga para a próxima. O MapEdu+ existe para encurtar esse caminho.
             </p>
             <p style="margin-top:.9rem;">
-              Por meio de filtros como localização, escolaridade e necessidades específicas, a plataforma torna a escolha escolar mais consciente, prática e transparente. Além disso, oferece perfis institucionais completos, com fotos, contatos, indicadores de acessibilidade, equipe de apoio e apresentação dos diferenciais da escola.
+              A busca filtra por bairro, etapa de ensino e necessidade específica. Cada escola tem um perfil com fotos, contato direto, equipe de apoio e o que existe de acessibilidade na estrutura — para a visita começar já sabendo o que perguntar.
             </p>
-            <a href="#contato">Saiba mais sobre o MapEdu+ →</a>
+            <a href="#contato">Quero conhecer o MapEdu+</a>
           </div>
         </article>
 
@@ -1275,12 +1319,32 @@
             <span class="etiqueta">Gestão educacional e inteligência de dados</span>
             <h3>MapEdu+Dados</h3>
             <p>
-              O MapEdu+Dados é o módulo voltado a gestores, secretarias de educação e prefeituras. Sua proposta é centralizar informações escolares, organizar itens e patrimônio, gerar relatórios estratégicos e transformar dados em decisões mais precisas para políticas educacionais e ações de inclusão.
+              É a mesma base, vista do outro lado do balcão. Secretaria de educação, diretoria de escola e prefeitura usam o MapEdu+Dados para saber o que existe na rede: patrimônio, salas, recursos de acessibilidade e como tudo isso está distribuído entre as unidades.
             </p>
             <p style="margin-top:.9rem;">
-              Com integração a painéis analíticos e potencial de apoio por inteligência artificial, a solução permite visualizar estoques, indicadores de acessibilidade, distribuição de recursos, infraestrutura e demandas regionais, fortalecendo o planejamento técnico e a eficiência da gestão pública.
+              O resultado sai em relatório e em planilha, no formato que o processo administrativo aceita. A pergunta que ele responde é banal e ninguém consegue responder hoje: quantas escolas da rede têm o que dizem ter.
             </p>
-            <a href="#contato">Saiba mais sobre o MapEdu+Dados →</a>
+            <a href="#contato">Falar sobre o MapEdu+Dados</a>
+          </div>
+        </article>
+
+        <article class="cartao cartao--destaque">
+          <div class="cartao__imagem">
+            <img src="./Imagens/SAMAUMA.png" alt="Projeto SAMAÚMA">
+          </div>
+          <div class="cartao__corpo">
+            <span class="etiqueta">Resíduos sólidos e economia circular</span>
+            <h3>SAMAÚMA</h3>
+            <p>
+              O SAMAÚMA é um sistema de rastreabilidade da destinação de resíduos sólidos de grandes geradores. Ele acompanha cada carga do estabelecimento até a unidade que a recebe, registrando <strong>três medições de três responsáveis diferentes</strong>: a quantidade estimada por quem gera, a massa observada em campo e a massa aferida na balança do destino.
+            </p>
+            <p style="margin-top:.9rem;">
+              Quando as medições divergem além da tolerância, o sistema abre pendência e a decisão fica com a administração pública, com justificativa registrada. Nada é sobrescrito: correção entra como evento novo, com o valor anterior preservado. Ao fim existe <strong>comprovante verificável por QR Code</strong>, que qualquer pessoa confere sem login, e uma trilha em que cada evento tem autor e horário.
+            </p>
+            <p style="margin-top:.9rem;">
+              O estabelecimento, a cooperativa de catadores e a prefeitura trabalham no mesmo fluxo. O catador registra a coleta sem precisar de celular próprio, e o que ele produziu fica documentado no nome dele. O sistema mede o resultado da política de resíduos; quem produz esse resultado continua sendo quem opera a política.
+            </p>
+            <a href="#contato">Agendar uma demonstração do SAMAÚMA</a>
           </div>
         </article>
       </div>
@@ -1289,28 +1353,28 @@
 
   <section class="secao" id="servicos">
     <div class="conteudo">
-      <h2 class="titulo-secao">soluções e frentes de atuação</h2>
+      <h2 class="titulo-secao">o que fazemos por contrato</h2>
       <p class="subtitulo-secao">
-        A ASA CÍVICA atua com produtos e serviços orientados à educação, inclusão, dados e fortalecimento institucional.
+        Além dos três sistemas, é isto que a ASA CÍVICA faz quando é contratada.
       </p>
 
       <div class="grade-servicos">
         <article class="servico">
-          <div class="servico__icone">💻</div>
-          <h3>Plataformas digitais com propósito</h3>
-          <p>Desenvolvemos soluções digitais voltadas à educação e à inclusão, com foco em navegação intuitiva, acessibilidade, clareza visual e valor institucional.</p>
+          <div class="servico__icone">01</div>
+          <h3>Sistemas sob medida</h3>
+          <p>Desenvolvimento de sistema para órgão público ou instituição de ensino, testado em aparelho de entrada e conexão ruim, porque é nele que o sistema vai rodar de verdade.</p>
         </article>
 
         <article class="servico">
-          <div class="servico__icone">📍</div>
-          <h3>Mapeamento e visibilidade educacional</h3>
-          <p>Estruturamos ambientes digitais que aproximam famílias e instituições, fortalecendo a descoberta de escolas, recursos e práticas inclusivas.</p>
+          <div class="servico__icone">02</div>
+          <h3>Implantação e formação em campo</h3>
+          <p>Instalar o sistema é a parte fácil. Formamos as equipes que vão operar, acompanhamos os primeiros meses e corrigimos o que aparecer. Sistema que ninguém sabe usar produz dado ruim, e dado ruim é pior que dado nenhum.</p>
         </article>
 
         <article class="servico">
-          <div class="servico__icone">📈</div>
-          <h3>Indicadores e apoio à decisão</h3>
-          <p>Transformamos dados educacionais em relatórios, painéis e inteligência operacional para gestores, secretarias e parceiros institucionais.</p>
+          <div class="servico__icone">03</div>
+          <h3>Indicador que aguenta auditoria</h3>
+          <p>Painéis e relatórios em que cada número declara de onde veio: medido, informado, calculado ou parâmetro adotado. Exportáveis em formato aberto, para instruir processo sem depender da gente.</p>
         </article>
       </div>
     </div>
@@ -1319,22 +1383,22 @@
   <section class="secao investidores" id="investidores">
     <div class="conteudo investidores__grade">
       <div>
-        <h2 class="titulo-secao">expansão, investidores e parcerias estratégicas</h2>
+        <h2 class="titulo-secao">investidores e parceiros</h2>
         <p class="subtitulo-secao">
-          A ASA CÍVICA está posicionada para avançar como uma startup de tecnologia social com potencial de escalabilidade, impacto público e aderência a demandas reais do setor educacional. O ecossistema MapEdu+ reúne proposta de valor clara, problema concreto, aplicabilidade institucional e espaço para crescimento por meio de parcerias, contratos, integração com redes educacionais e desenvolvimento de novas funcionalidades.
+          A ASA CÍVICA construiu seus sistemas antes de ter contrato, com dinheiro próprio. Isso tem um lado ruim, que é o caixa, e um lado bom: quem senta com a gente vê software funcionando, não apresentação de slides.
         </p>
         <p class="subtitulo-secao" style="margin-top:-1rem;">
-          Buscamos conexão com investidores, aceleradoras, organizações parceiras e lideranças institucionais que desejem apoiar uma solução capaz de unir inclusão educacional, inteligência de dados e modernização da gestão. Nossa visão é consolidar um ecossistema sustentável, tecnicamente robusto e comercialmente relevante.
+          Procuramos parceiros para três coisas concretas: chegar a mais municípios de Rondônia, contratar reforço técnico e sustentar a operação enquanto os primeiros contratos maduram. Conversa direta, sem intermediário.
         </p>
       </div>
 
       <div class="investidores__card">
         <h3>Por que investir ou se conectar com a ASA CÍVICA</h3>
         <ul class="investidores__lista">
-          <li>Atua sobre dores reais do mercado educacional, especialmente inclusão, visibilidade escolar e organização de dados.</li>
-          <li>Possui proposta híbrida, com valor para famílias, instituições de ensino, secretarias e prefeituras.</li>
-          <li>Apresenta potencial de expansão por licenciamento, parcerias institucionais, módulos complementares e integrações estratégicas.</li>
-          <li>Combina impacto social, narrativa forte de marca, aplicabilidade pública e possibilidade de crescimento comercial.</li>
+          <li>Os problemas não foram inventados numa sala. Um decreto municipal de 2018 sem meio de fiscalização, e uma rede de ensino onde ninguém sabe quais escolas têm acessibilidade de fato.</li>
+          <li>Quem paga é a administração pública, que tem obrigação legal de resolver esses problemas e hoje não tem instrumento.</li>
+          <li>O modelo é licença anual renovável. O sistema continua nosso, o município paga para usar, e o mesmo código atende o próximo município sem começar do zero.</li>
+          <li>Rondônia tem 52 municípios com o mesmo problema. Porto Velho é o primeiro, não o único.</li>
         </ul>
       </div>
     </div>
@@ -1345,7 +1409,7 @@
       <div class="contato-card">
         <h2 class="titulo-secao" style="margin-bottom:.6rem;">contato</h2>
         <p class="subtitulo-secao" style="margin-bottom:1rem;">
-          Estamos abertos a conversas com parceiros, investidores, instituições de ensino, secretarias, aceleradoras e organizações interessadas em fortalecer o ecossistema MapEdu+.
+          Escreva contando o que você precisa resolver. Respondemos com o que dá para fazer e o que não dá.
         </p>
 
         <a class="email-box" href="mailto:asacivica@gmail.com">asacivica@gmail.com</a>
@@ -1357,9 +1421,9 @@
       </div>
 
       <div class="contato-card">
-        <h3 style="margin-top:0; color:var(--texto-escuro);">Conexões estratégicas</h3>
+        <h3 style="margin-top:0; color:var(--texto-escuro);">Parcerias</h3>
         <p>
-          A ASA CÍVICA busca construir relações de longo prazo com parceiros capazes de contribuir para validação, expansão, investimento, implementação institucional e fortalecimento comercial do ecossistema.
+          Trabalhamos melhor com quem fica. Piloto de três meses que ninguém acompanha depois não valida nada.
         </p>
 
         <div class="caixa-lateral" style="margin-top:1rem;">
@@ -1380,7 +1444,7 @@
             <span>Tecnologia social</span>
           </span>
         </div>
-        <p>Transformando educação, inclusão e gestão educacional por meio de tecnologia social, inteligência de dados e visão de futuro.</p>
+        <p>Software de interesse público, feito em Porto Velho, Rondônia.</p>
       </div>
 
       <div>
@@ -1388,7 +1452,7 @@
         <ul class="lista-simples">
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#servicos">Soluções</a></li>
+          <li><a href="#servicos">Serviços</a></li>
           <li><a href="#investidores">Expansão</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
@@ -1409,10 +1473,10 @@
       <button class="modal-rede__fechar" id="fechar-modal-rede" aria-label="Fechar">✕</button>
 
       <div class="modal-rede__topo">
-        <span class="modal-rede__kicker">CONEXÕES ESTRATÉGICAS</span>
+        <span class="modal-rede__kicker">QUEM FAZ</span>
         <h2 class="modal-rede__titulo" id="modal-rede-titulo">Sócios, parceiros e equipe</h2>
         <p class="modal-rede__texto">
-          Conheça a rede que fortalece a ASA CÍVICA por meio de visão estratégica, colaboração institucional, inovação e capacidade de execução.
+          Quem faz a ASA CÍVICA acontecer.
         </p>
       </div>
 
