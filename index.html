@@ -70,8 +70,8 @@
       --texto: #32475b;
       --texto-escuro: #0f172a;
       --borda: rgba(10, 61, 98, 0.10);
-      --sombra-1: 0 12px 30px rgba(15, 23, 42, 0.10);
-      --sombra-2: 0 22px 60px rgba(15, 23, 42, 0.16);
+      --sombra-1: 0 2px 10px rgba(15, 23, 42, 0.06);
+      --sombra-2: 0 8px 26px rgba(15, 23, 42, 0.10);
       --raio: 24px;
       --raio-pequeno: 18px;
       --pill: 999px;
@@ -179,8 +179,9 @@
 
     .link-menu {
       color: rgba(255,255,255,0.88);
-      font-weight: 700;
-      padding: .9rem 1rem;
+      font-weight: 600;
+      font-size: .95rem;
+      padding: .55rem .8rem;
       border-radius: var(--pill);
       transition: var(--transicao);
       cursor: pointer;
@@ -218,18 +219,18 @@
       width: 46px;
       height: 46px;
       padding: 0;
-      font-size: 1.2rem;
+      font-size: 1.05rem;
       cursor: pointer;
     }
 
     .hero {
       position: relative;
-      min-height: 78vh;
+      min-height: 62vh;
       overflow: hidden;
       background:
         linear-gradient(90deg, rgba(5,13,24,0.86) 0%, rgba(5,13,24,0.35) 38%, rgba(5,13,24,0.18) 100%),
         url("./Imagens/ASA CÍVICA.png") center center / cover no-repeat;
-      border-bottom: 6px solid #111827;
+      border-bottom: 3px solid #111827;
     }
 
     .hero::after {
@@ -243,10 +244,10 @@
     .hero__conteudo {
       position: relative;
       z-index: 2;
-      min-height: 78vh;
+      min-height: 62vh;
       display: flex;
       align-items: center;
-      padding: 4rem 0 10rem;
+      padding: 2.6rem 0 6.5rem;
     }
 
     .hero__grid {
@@ -266,19 +267,19 @@
       display: inline-flex;
       align-items: center;
       gap: .6rem;
-      padding: .55rem .95rem;
-      border-radius: var(--pill);
-      background: rgba(255,255,255,0.10);
-      border: 1px solid rgba(255,255,255,0.18);
-      backdrop-filter: blur(10px);
-      font-size: .9rem;
+      padding: 0 0 0 .8rem;
+      border-left: 2px solid var(--dourado-1);
+      font-size: .74rem;
       font-weight: 700;
-      margin-bottom: 1rem;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 1.1rem;
     }
 
     .hero__titulo {
       font-family: "Bebas Neue", sans-serif;
-      font-size: clamp(3.5rem, 8vw, 7.2rem);
+      font-size: clamp(2.4rem, 4.6vw, 3.8rem);
       line-height: .9;
       letter-spacing: .02em;
       margin: 0 0 1rem;
@@ -291,9 +292,9 @@
     }
 
     .hero__descricao {
-      max-width: 62ch;
-      font-size: 1.08rem;
-      line-height: 1.75;
+      max-width: 56ch;
+      font-size: 1rem;
+      line-height: 1.62;
       color: rgba(255,255,255,0.92);
       margin: 0 0 1.8rem;
     }
@@ -308,12 +309,12 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 1rem 1.4rem;
+      padding: .78rem 1.2rem;
       border-radius: 0;
       background: var(--dourado-1);
       color: #111827;
       font-weight: 900;
-      box-shadow: 0 14px 34px rgba(214,164,25,0.28);
+      box-shadow: none;
       transition: var(--transicao);
     }
 
@@ -326,7 +327,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 1rem 1.4rem;
+      padding: .78rem 1.2rem;
       border-radius: 0;
       background: rgba(255,255,255,0.10);
       border: 1px solid rgba(255,255,255,0.18);
@@ -411,7 +412,7 @@
 
     .destaque-flutuante {
       position: relative;
-      margin-top: -90px;
+      margin-top: -56px;
       z-index: 5;
     }
 
@@ -419,21 +420,22 @@
       width: min(100%, 860px);
       background: #111111;
       color: white;
-      padding: 2rem 2rem 2.1rem;
+      padding: 1.5rem 1.6rem 1.6rem;
       box-shadow: var(--sombra-2);
       border-top: 6px solid var(--dourado-1);
     }
 
     .destaque-flutuante__kicker {
       font-family: "Bebas Neue", sans-serif;
-      letter-spacing: .08em;
-      font-size: 1.1rem;
+      letter-spacing: .16em;
+      font-size: .72rem;
+      text-transform: uppercase;
       color: var(--dourado-2);
-      margin-bottom: .45rem;
+      margin-bottom: .6rem;
     }
 
     .destaque-flutuante__titulo {
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-size: clamp(1.3rem, 2vw, 1.7rem);
       line-height: 1.06;
       margin: 0 0 .8rem;
       color: white;
@@ -499,24 +501,27 @@
     }
 
     .secao {
-      padding: 4.8rem 0;
+      padding: 3.4rem 0;
     }
 
     .titulo-secao {
       font-family: "Bebas Neue", sans-serif;
-      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      font-size: clamp(1.6rem, 2.6vw, 2.15rem);
       letter-spacing: .03em;
       color: var(--texto-escuro);
-      margin: 0 0 .5rem;
-      line-height: .95;
+      margin: 0 0 .9rem;
+      line-height: 1;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid var(--dourado-1);
+      display: inline-block;
     }
 
     .subtitulo-secao {
       color: #64748b;
-      font-size: 1.02rem;
-      line-height: 1.75;
-      max-width: 70ch;
-      margin: 0 0 2rem;
+      font-size: .97rem;
+      line-height: 1.68;
+      max-width: 62ch;
+      margin: 0 0 1.6rem;
     }
 
     .sobre {
@@ -661,7 +666,7 @@
     .cartao h3 {
       margin: 0 0 .55rem;
       color: var(--texto-escuro);
-      font-size: 1.18rem;
+      font-size: 1.08rem;
     }
 
     .cartao p {
@@ -766,7 +771,7 @@
 
     .investidores__card h3 {
       margin: 0 0 .7rem;
-      font-size: 1.2rem;
+      font-size: 1.05rem;
       color: var(--dourado-2);
     }
 
@@ -892,7 +897,7 @@
       cursor: pointer;
       background: #0f172a;
       color: white;
-      font-size: 1.2rem;
+      font-size: 1.05rem;
       font-weight: 900;
       transition: var(--transicao);
     }
@@ -919,7 +924,7 @@
 
     .modal-rede__titulo {
       margin: 0 0 .6rem;
-      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-size: clamp(1.4rem, 2.4vw, 1.9rem);
       line-height: .95;
       color: var(--texto-escuro);
       font-family: "Bebas Neue", sans-serif;
@@ -1050,12 +1055,12 @@
       }
 
       .hero__conteudo {
-        min-height: 72vh;
-        padding: 3.5rem 0 8rem;
+        min-height: 58vh;
+        padding: 2.2rem 0 5.5rem;
       }
 
       .hero__titulo {
-        font-size: clamp(3rem, 12vw, 5rem);
+        font-size: clamp(2rem, 8.5vw, 2.8rem);
       }
 
       .destaque-flutuante {
@@ -1160,7 +1165,7 @@
       <nav class="menu-navegacao">
         <a class="link-menu" href="#sobre">Sobre</a>
         <a class="link-menu" href="#projetos">Projetos</a>
-        <a class="link-menu" href="#servicos">Serviços</a>
+        <a class="link-menu" href="#servicos">Soluções</a>
         <a class="link-menu" href="#investidores">Expansão</a>
         <a class="link-menu" href="#" id="abrir-modal-rede">Rede</a>
         <a class="botao-topo" href="#contato">FALAR AGORA</a>
@@ -1358,7 +1363,7 @@
 
   <section class="secao" id="servicos">
     <div class="conteudo">
-      <h2 class="titulo-secao">o que fazemos por contrato</h2>
+      <h2 class="titulo-secao">soluções</h2>
       <p class="subtitulo-secao">
         Além dos três sistemas, é isto que a ASA CÍVICA faz quando é contratada.
       </p>
@@ -1457,7 +1462,7 @@
         <ul class="lista-simples">
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#servicos">Soluções</a></li>
           <li><a href="#investidores">Expansão</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
