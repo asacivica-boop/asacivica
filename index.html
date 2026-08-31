@@ -459,7 +459,7 @@
 
     .atalhos__grade {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.2rem;
     }
 
@@ -487,6 +487,16 @@
       font-weight: 800;
       letter-spacing: .04em;
       margin-bottom: .75rem;
+    }
+
+    .atalho__dominio {
+      display: block;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--dourado-1);
+      margin-bottom: .3rem;
     }
 
     .atalho h3 {
@@ -1230,26 +1240,23 @@
       <div class="atalhos__grade">
         <article class="atalho">
           <div class="atalho__icone">01</div>
-          <h3>Para a família</h3>
-          <p>Procurar escola para um filho com deficiência costuma virar uma maratona de telefonemas. O MapEdu+ reúne num lugar só o que a família precisa saber antes de visitar: estrutura, profissionais de apoio e o que a escola de fato pratica.</p>
+          <span class="atalho__dominio">Educação inclusiva</span>
+          <h3>MapEdu+</h3>
+          <p>Mostra à família quais escolas têm estrutura, profissional de apoio e prática de inclusão. Hoje isso se descobre ligando de escola em escola.</p>
         </article>
 
         <article class="atalho">
           <div class="atalho__icone">02</div>
-          <h3>Para a escola</h3>
-          <p>Escola que investiu em acessibilidade quase nunca tem onde mostrar isso. O perfil institucional reúne fotos, contatos, equipe de apoio e recursos de inclusão, e fica aberto para quem procura.</p>
+          <span class="atalho__dominio">Gestão da rede de ensino</span>
+          <h3>MapEdu+Dados</h3>
+          <p>Secretaria e prefeitura passam a saber o que existe na rede: patrimônio, salas, acessibilidade e como os recursos estão distribuídos.</p>
         </article>
 
         <article class="atalho">
           <div class="atalho__icone">03</div>
-          <h3>Para quem administra a rede</h3>
-          <p>Secretaria que não sabe onde está o patrimônio, quantas salas têm acessibilidade ou como os recursos estão distribuídos decide no escuro. O MapEdu+Dados organiza esse cadastro e o devolve em relatório.</p>
-        </article>
-
-        <article class="atalho">
-          <div class="atalho__icone">04</div>
-          <h3>Para o resíduo da cidade</h3>
-          <p>Um decreto de 2018 proíbe grande gerador de usar a coleta pública, e desde então ninguém tem como verificar se a regra é cumprida. O SAMAÚMA registra cada carga até o destino e produz a prova que faltava.</p>
+          <span class="atalho__dominio">Resíduos e economia circular</span>
+          <h3>SAMAÚMA</h3>
+          <p>Um decreto de 2018 proíbe grande gerador de usar a coleta pública, e ninguém tem como verificar. O SAMAÚMA registra cada carga até o destino.</p>
         </article>
       </div>
     </div>
