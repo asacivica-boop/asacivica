@@ -85,11 +85,14 @@
 
     html {
       scroll-behavior: smooth;
+      font-size: 15px;
     }
 
     body {
       margin: 0;
       font-family: "Inter", sans-serif;
+      font-size: 1rem;
+      line-height: 1.55;
       color: var(--texto);
       background:
         radial-gradient(circle at top left, rgba(214,164,25,0.10), transparent 22%),
@@ -144,8 +147,8 @@
     }
 
     .marca__simbolo {
-      width: 48px;
-      height: 48px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       display: grid;
       place-items: center;
@@ -279,7 +282,7 @@
 
     .hero__titulo {
       font-family: "Bebas Neue", sans-serif;
-      font-size: clamp(2.4rem, 4.6vw, 3.8rem);
+      font-size: clamp(1.9rem, 3.2vw, 2.7rem);
       line-height: .9;
       letter-spacing: .02em;
       margin: 0 0 1rem;
@@ -293,8 +296,8 @@
 
     .hero__descricao {
       max-width: 56ch;
-      font-size: 1rem;
-      line-height: 1.62;
+      font-size: .98rem;
+      line-height: 1.58;
       color: rgba(255,255,255,0.92);
       margin: 0 0 1.8rem;
     }
@@ -417,10 +420,10 @@
     }
 
     .destaque-flutuante__caixa {
-      width: min(100%, 860px);
+      width: min(100%, 760px);
       background: #111111;
       color: white;
-      padding: 1.5rem 1.6rem 1.6rem;
+      padding: 1.25rem 1.4rem 1.3rem;
       box-shadow: var(--sombra-2);
       border-top: 6px solid var(--dourado-1);
     }
@@ -435,7 +438,7 @@
     }
 
     .destaque-flutuante__titulo {
-      font-size: clamp(1.3rem, 2vw, 1.7rem);
+      font-size: clamp(1.15rem, 1.5vw, 1.35rem);
       line-height: 1.06;
       margin: 0 0 .8rem;
       color: white;
@@ -443,7 +446,7 @@
     }
 
     .destaque-flutuante__texto {
-      font-size: 1.02rem;
+      font-size: .95rem;
       line-height: 1.75;
       color: rgba(255,255,255,0.88);
       margin: 0;
@@ -473,31 +476,31 @@
     }
 
     .atalho__icone {
-      width: 52px;
-      height: 52px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       display: grid;
       place-items: center;
       background: linear-gradient(135deg, rgba(214,164,25,0.14), rgba(15,76,129,0.12));
       color: var(--azul-2);
-      font-size: .95rem;
+      font-size: .78rem;
       font-weight: 800;
-      letter-spacing: .06em;
-      margin-bottom: .9rem;
+      letter-spacing: .04em;
+      margin-bottom: .75rem;
     }
 
     .atalho h3 {
       margin: 0 0 .4rem;
       color: var(--texto-escuro);
-      font-size: 1.05rem;
-      font-weight: 800;
+      font-size: 1rem;
+      font-weight: 700;
     }
 
     .atalho p {
       margin: 0;
       color: #64748b;
-      font-size: .96rem;
-      line-height: 1.65;
+      font-size: .93rem;
+      line-height: 1.55;
     }
 
     .secao {
@@ -506,7 +509,7 @@
 
     .titulo-secao {
       font-family: "Bebas Neue", sans-serif;
-      font-size: clamp(1.6rem, 2.6vw, 2.15rem);
+      font-size: clamp(1.35rem, 1.9vw, 1.7rem);
       letter-spacing: .03em;
       color: var(--texto-escuro);
       margin: 0 0 .9rem;
@@ -518,8 +521,8 @@
 
     .subtitulo-secao {
       color: #64748b;
-      font-size: .97rem;
-      line-height: 1.68;
+      font-size: .95rem;
+      line-height: 1.6;
       max-width: 62ch;
       margin: 0 0 1.6rem;
     }
@@ -555,8 +558,8 @@
     }
 
     .check {
-      width: 34px;
-      height: 34px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       flex: 0 0 34px;
       display: grid;
@@ -574,14 +577,14 @@
     .caixa-lateral {
       background: linear-gradient(135deg, rgba(15,76,129,0.04), rgba(214,164,25,0.08));
       border: 1px solid rgba(15,76,129,0.10);
-      padding: 1.25rem;
+      padding: 1.1rem;
       box-shadow: var(--sombra-1);
     }
 
     .caixa-lateral h3 {
       margin: 0 0 .45rem;
       color: var(--texto-escuro);
-      font-size: 1.05rem;
+      font-size: 1rem;
     }
 
     .caixa-lateral p {
@@ -626,7 +629,7 @@
     }
 
     .cartao__corpo {
-      padding: 1.3rem;
+      padding: 1.15rem 1.2rem;
     }
 
     .cartao--destaque {
@@ -666,13 +669,14 @@
     .cartao h3 {
       margin: 0 0 .55rem;
       color: var(--texto-escuro);
-      font-size: 1.08rem;
+      font-size: 1.02rem;
     }
 
     .cartao p {
       margin: 0;
       color: #64748b;
-      line-height: 1.75;
+      font-size: .95rem;
+      line-height: 1.58;
     }
 
     .cartao a {
@@ -692,7 +696,7 @@
       background: white;
       border: 1px solid var(--borda);
       box-shadow: var(--sombra-1);
-      padding: 1.35rem;
+      padding: 1.15rem 1.2rem;
       transition: var(--transicao);
     }
 
@@ -701,29 +705,30 @@
     }
 
     .servico__icone {
-      width: 54px;
-      height: 54px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       display: grid;
       place-items: center;
       background: linear-gradient(135deg, var(--azul-2), var(--dourado-1));
       color: white;
-      font-size: .95rem;
+      font-size: .78rem;
       font-weight: 800;
-      letter-spacing: .06em;
-      margin-bottom: .85rem;
+      letter-spacing: .04em;
+      margin-bottom: .7rem;
     }
 
     .servico h3 {
       margin: 0 0 .45rem;
       color: var(--texto-escuro);
-      font-size: 1.05rem;
+      font-size: 1rem;
     }
 
     .servico p {
       margin: 0;
       color: #64748b;
-      line-height: 1.7;
+      font-size: .93rem;
+      line-height: 1.55;
     }
 
     .investidores {
@@ -764,14 +769,14 @@
     .investidores__card {
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.10);
-      box-shadow: var(--sombra-2);
-      padding: 1.6rem;
-      backdrop-filter: blur(10px);
+      box-shadow: var(--sombra-1);
+      padding: 1.3rem;
+      backdrop-filter: none;
     }
 
     .investidores__card h3 {
       margin: 0 0 .7rem;
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: var(--dourado-2);
     }
 
@@ -924,7 +929,7 @@
 
     .modal-rede__titulo {
       margin: 0 0 .6rem;
-      font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+      font-size: clamp(1.2rem, 1.8vw, 1.5rem);
       line-height: .95;
       color: var(--texto-escuro);
       font-family: "Bebas Neue", sans-serif;
@@ -954,7 +959,7 @@
     .modal-rede__secao h3 {
       margin: 0 0 1rem;
       color: var(--texto-escuro);
-      font-size: 1.15rem;
+      font-size: 1rem;
     }
 
     .modal-rede__cards {
@@ -1060,7 +1065,7 @@
       }
 
       .hero__titulo {
-        font-size: clamp(2rem, 8.5vw, 2.8rem);
+        font-size: clamp(1.7rem, 7vw, 2.2rem);
       }
 
       .destaque-flutuante {
