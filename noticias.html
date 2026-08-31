@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Na imprensa e na academia — ASA CÍVICA</title>
+<meta name="description" content="Onde o SAMAÚMA, o MapEdu+ e o MapEdu+Dados apareceram: cobertura de imprensa, publicação científica e o contexto público em que os projetos atuam.">
+<link rel="canonical" href="https://asacivica.com.br/noticias.html">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Na imprensa e na academia — ASA CÍVICA">
+<meta property="og:description" content="Onde o SAMAÚMA, o MapEdu+ e o MapEdu+Dados apareceram: imprensa, publicação científica e contexto público.">
+<meta property="og:url" content="https://asacivica.com.br/noticias.html">
+<meta property="og:image" content="https://asacivica.com.br/Imagens/ASA%20C%C3%8DVICA.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --azul-2: #0f4c81;
+    --dourado-1: #d6a419;
+    --dourado-2: #f2c94c;
+    --gelo: #f7f9fc;
+    --texto: #32475b;
+    --texto-escuro: #0f172a;
+    --borda: rgba(10, 61, 98, 0.10);
+    --sombra-1: 0 2px 10px rgba(15, 23, 42, 0.06);
+    --pill: 999px;
+    --largura: 1240px;
+    --transicao: .28s ease;
+  }
+
+  html { scroll-behavior: smooth; font-size: 15px; }
+
+  body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--texto);
+    background:
+      radial-gradient(circle at top left, rgba(214,164,25,0.10), transparent 22%),
+      linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .conteudo { width: min(calc(100% - 32px), var(--largura)); margin: 0 auto; }
+
+  /* ---------------------------------------------------------- cabecalho */
+
+  .cabecalho {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(11, 20, 34, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .barra-cabecalho {
+    min-height: 56px; display: flex; align-items: center;
+    justify-content: space-between; gap: 1rem;
+  }
+
+  .marca { display: flex; align-items: center; gap: .6rem; color: white; font-weight: 800; }
+
+  .marca__simbolo {
+    width: 32px; height: 32px; border-radius: 50%;
+    display: grid; place-items: center; font-size: .72rem;
+    background: linear-gradient(135deg, var(--dourado-1), var(--azul-2));
+  }
+
+  .marca__nome { display: flex; flex-direction: column; line-height: 1; }
+  .marca__nome strong { font-size: .9rem; }
+  .marca__nome span { font-size: .66rem; color: rgba(255,255,255,0.68); margin-top: .2rem; }
+
+  .menu-navegacao { display: flex; align-items: center; gap: .35rem; }
+
+  .link-menu {
+    color: rgba(255,255,255,0.88); font-weight: 600; font-size: .88rem;
+    padding: .4rem .6rem; border-radius: var(--pill); transition: var(--transicao);
+  }
+  .link-menu:hover { color: var(--dourado-2); }
+  .link-menu[aria-current="page"] { color: var(--dourado-2); }
+
+  .botao-topo {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: .48rem 1rem; border-radius: var(--pill);
+    border: 1px solid var(--dourado-1); color: var(--dourado-2);
+    font-weight: 800; font-size: .82rem; transition: var(--transicao);
+  }
+  .botao-topo:hover { background: var(--dourado-1); color: #111827; }
+
+  /* -------------------------------------------------------------- topo */
+
+  .topo-pagina { padding: 2.6rem 0 1.6rem; }
+
+  .voltar {
+    display: inline-block; font-size: .78rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+    color: var(--azul-2); margin-bottom: .9rem;
+    padding-left: .8rem; border-left: 2px solid var(--dourado-1);
+  }
+
+  .titulo-pagina {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+    letter-spacing: .03em; color: var(--texto-escuro);
+    margin: 0 0 .9rem; line-height: 1;
+    padding-bottom: .5rem; border-bottom: 2px solid var(--dourado-1);
+    display: inline-block;
+  }
+
+  .intro { font-size: .95rem; line-height: 1.6; max-width: 62ch; margin: 0 0 .6rem; color: #64748b; }
+
+  .aviso {
+    margin: 1.2rem 0 0; padding: .85rem 1rem;
+    background: rgba(214,164,25,0.08); border-left: 3px solid var(--dourado-1);
+    font-size: .88rem; line-height: 1.55; max-width: 74ch;
+  }
+
+  /* ------------------------------------------------------------ secoes */
+
+  .bloco { padding: 1.8rem 0; }
+
+  .bloco__cabeca { display: flex; align-items: baseline; gap: .7rem; flex-wrap: wrap; margin-bottom: .3rem; }
+
+  .bloco__num {
+    width: 30px; height: 30px; border-radius: 50%;
+    display: grid; place-items: center; flex: none;
+    font-size: .7rem; font-weight: 800; letter-spacing: .04em;
+    background: linear-gradient(135deg, rgba(214,164,25,0.16), rgba(15,76,129,0.12));
+    color: var(--azul-2);
+  }
+
+  .bloco h2 {
+    font-family: "Bebas Neue", sans-serif; font-size: 1.35rem;
+    letter-spacing: .03em; color: var(--texto-escuro); margin: 0; line-height: 1;
+  }
+
+  .bloco__nota { font-size: .9rem; line-height: 1.58; color: #64748b; max-width: 68ch; margin: .5rem 0 1.1rem; }
+
+  /* ------------------------------------------------------------ itens */
+
+  .lista { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem; }
+
+  .item {
+    background: white; border: 1px solid var(--borda);
+    box-shadow: var(--sombra-1); padding: .95rem 1.1rem;
+    transition: var(--transicao);
+  }
+  .item:hover { transform: translateY(-2px); border-color: rgba(214,164,25,0.45); }
+
+  .item__meta {
+    display: flex; align-items: center; gap: .5rem; flex-wrap: wrap;
+    font-size: .72rem; font-weight: 700; letter-spacing: .06em;
+    text-transform: uppercase; margin-bottom: .35rem;
+  }
+  .item__fonte { color: var(--azul-2); }
+  .item__data { color: #94a3b8; font-weight: 600; letter-spacing: .04em; }
+
+  .selo {
+    padding: .12rem .45rem; border-radius: var(--pill);
+    background: rgba(214,164,25,0.18); color: #8b6912; letter-spacing: .05em;
+  }
+
+  .item h3 { margin: 0 0 .3rem; font-size: 1rem; color: var(--texto-escuro); line-height: 1.35; }
+  .item h3 a:hover { color: var(--azul-2); text-decoration: underline; }
+  .item p { margin: 0 0 .5rem; font-size: .88rem; line-height: 1.55; color: #64748b; }
+
+  .item__link { font-size: .8rem; font-weight: 700; color: var(--azul-2); }
+  .item__link:hover { text-decoration: underline; }
+  .item__url { display: block; font-size: .72rem; color: #94a3b8; margin-top: .25rem; word-break: break-all; }
+
+  .citacao {
+    margin: .5rem 0; padding-left: .8rem; border-left: 2px solid var(--borda);
+    font-size: .86rem; line-height: 1.55; color: #64748b; font-style: italic;
+  }
+
+  .ficha { display: grid; gap: .2rem; margin: .55rem 0; font-size: .84rem; }
+  .ficha div { display: flex; gap: .5rem; }
+  .ficha dt { color: #94a3b8; min-width: 82px; flex: none; }
+  .ficha dd { margin: 0; color: var(--texto); }
+
+  .vazio {
+    background: var(--gelo); border: 1px dashed rgba(10,61,98,0.22);
+    padding: 1rem 1.1rem; font-size: .88rem; line-height: 1.58; color: #64748b;
+  }
+
+  /* ----------------------------------------------------------- rodape */
+
+  .rodape { background: #0b1422; color: rgba(255,255,255,0.72); padding: 1.8rem 0; margin-top: 2rem; font-size: .88rem; }
+  .rodape a:hover { color: var(--dourado-2); }
+  .rodape__linha { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+
+  @media (max-width: 700px) {
+    .menu-navegacao { gap: .1rem; }
+    .link-menu { padding: .35rem .4rem; font-size: .8rem; }
+    .marca__nome { display: none; }
+    .botao-topo { display: none; }
+    .ficha div { flex-direction: column; gap: 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="cabecalho">
+  <div class="conteudo barra-cabecalho">
+    <a class="marca" href="./index.html">
+      <span class="marca__simbolo">AC</span>
+      <span class="marca__nome">
+        <strong>ASA CÍVICA</strong>
+        <span>Tecnologia social</span>
+      </span>
+    </a>
+
+    <nav class="menu-navegacao">
+      <a class="link-menu" href="./index.html#sobre">Sobre</a>
+      <a class="link-menu" href="./index.html#projetos">Projetos</a>
+      <a class="link-menu" href="./noticias.html" aria-current="page">Notícias</a>
+      <a class="link-menu" href="./index.html#investidores">Expansão</a>
+      <a class="botao-topo" href="./index.html#contato">FALAR AGORA</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="topo-pagina">
+    <div class="conteudo">
+      <a class="voltar" href="./index.html">← Voltar ao início</a>
+      <h1 class="titulo-pagina">na imprensa e na academia</h1>
+      <p class="intro">
+        Onde os projetos da ASA CÍVICA apareceram fora da nossa própria casa: veículos de imprensa,
+        portais oficiais e publicação científica revisada por pares.
+      </p>
+      <p class="intro">
+        Todos os links abaixo foram conferidos e apontam para a fonte original. Nada aqui é
+        release nosso republicado.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================ SAMAÚMA -->
+
+  <section class="bloco">
+    <div class="conteudo">
+      <div class="bloco__cabeca">
+        <span class="bloco__num">01</span>
+        <h2>SAMAÚMA</h2>
+      </div>
+      <p class="bloco__nota">
+        O SAMAÚMA foi apresentado no <strong>2º Béra Hackathon — Edição Pró-Catador</strong>, realizado em
+        Porto Velho entre 14 e 16 de agosto de 2026, e ficou em <strong>segundo lugar</strong> entre
+        12 equipes e 68 participantes. A equipe: Nataniel Wilson, Raven Parintintin, Júlia Moraes,
+        Carlos Miguel e Lucas Hector. Organização: Prefeitura de Porto Velho, ARDPV, Sebrae Rondônia e SMTI.
+      </p>
+
+      <ul class="lista">
+        <li class="item">
+          <div class="item__meta">
+            <span class="selo">Resultado oficial</span>
+            <span class="item__fonte">Prefeitura de Porto Velho</span>
+            <span class="item__data">21 ago 2026</span>
+          </div>
+          <h3><a href="https://www.portovelho.ro.gov.br/noticias/57977" target="_blank" rel="noopener">Béra Hackathon revela soluções inovadoras para transformar a gestão de resíduos em Porto Velho</a></h3>
+          <p>
+            A matéria com a classificação final. O SAMAÚMA aparece em segundo lugar, atrás do RotaLume
+            e à frente do PortoRec, com a equipe nominada.
+          </p>
+          <p class="citacao">
+            “A proposta permite organizar demandas de coleta e acompanhar etapas como transporte,
+            recebimento e destinação dos materiais, produzindo registros digitais das operações realizadas.”
+          </p>
+          <a class="item__link" href="https://www.portovelho.ro.gov.br/noticias/57977" target="_blank" rel="noopener">Ler no portal da Prefeitura →</a>
+          <span class="item__url">portovelho.ro.gov.br/noticias/57977</span>
+        </li>
+
+        <li class="item">
+          <div class="item__meta">
+            <span class="item__fonte">Prefeitura de Porto Velho</span>
+            <span class="item__data">17 ago 2026</span>
+          </div>
+          <h3><a href="https://www.portovelho.ro.gov.br/noticias/57921" target="_blank" rel="noopener">Béra Hackathon chega ao fim com jovens apresentando soluções para Porto Velho</a></h3>
+          <p>
+            Cobertura do encerramento, no domingo 16. Traz a fala da Júlia Moraes, 14 anos, integrante
+            da equipe, sobre a importância de eventos assim na cidade.
+          </p>
+          <a class="item__link" href="https://www.portovelho.ro.gov.br/noticias/57921" target="_blank" rel="noopener">Ler no portal da Prefeitura →</a>
+          <span class="item__url">portovelho.ro.gov.br/noticias/57921</span>
+        </li>
+
+        <li class="item">
+          <div class="item__meta">
+            <span class="item__fonte">News Rondônia</span>
+            <span class="item__data">21 ago 2026</span>
+          </div>
+          <h3><a href="https://newsrondonia.com.br/noticias/2026/08/21/hackathon-apresenta-solucoes-para-residuos-em-porto-velho/" target="_blank" rel="noopener">Hackathon apresenta soluções para resíduos em Porto Velho</a></h3>
+          <p>Cobertura independente do mesmo resultado.</p>
+          <a class="item__link" href="https://newsrondonia.com.br/noticias/2026/08/21/hackathon-apresenta-solucoes-para-residuos-em-porto-velho/" target="_blank" rel="noopener">Ler no News Rondônia →</a>
+          <span class="item__url">newsrondonia.com.br</span>
+        </li>
+
+        <li class="item">
+          <div class="item__meta">
+            <span class="item__fonte">Capital Rondônia</span>
+            <span class="item__data">ago 2026</span>
+          </div>
+          <h3><a href="https://www.capitalrondonia.com/noticia/bera-hackathon-revela-solucoes-inovadoras-para-transformar-a-gestao-de-residuos-em-porto-velho" target="_blank" rel="noopener">Béra Hackathon revela soluções inovadoras para transformar a gestão de resíduos em Porto Velho</a></h3>
+          <p>Mesma pauta em veículo regional de alcance estadual.</p>
+          <a class="item__link" href="https://www.capitalrondonia.com/noticia/bera-hackathon-revela-solucoes-inovadoras-para-transformar-a-gestao-de-residuos-em-porto-velho" target="_blank" rel="noopener">Ler no Capital Rondônia →</a>
+          <span class="item__url">capitalrondonia.com</span>
+        </li>
+
+        <li class="item">
+          <div class="item__meta">
+            <span class="item__fonte">Diário o Norte</span>
+            <span class="item__data">ago 2026</span>
+          </div>
+          <h3><a href="https://www.diarioonorte.com/2026/08/bera-hackathon-revela-solucoes.html" target="_blank" rel="noopener">Béra Hackathon revela soluções inovadoras para transformar a gestão de resíduos em Porto Velho</a></h3>
+          <p>
+            O mesmo veículo publicou também
+            <a href="https://www.diarioonorte.com/2026/08/bera-hackathon-encerra-segunda-edicao.html" target="_blank" rel="noopener" style="color:var(--azul-2);font-weight:600;">o texto de encerramento da segunda edição</a>.
+          </p>
+          <a class="item__link" href="https://www.diarioonorte.com/2026/08/bera-hackathon-revela-solucoes.html" target="_blank" rel="noopener">Ler no Diário o Norte →</a>
+          <span class="item__url">diarioonorte.com</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================ MAPEDU+ -->
+
+  <section class="bloco">
+    <div class="conteudo">
+      <div class="bloco__cabeca">
+        <span class="bloco__num">02</span>
+        <h2>MapEdu+</h2>
+      </div>
+      <p class="bloco__nota">
+        O MapEdu+ foi publicado em anais de simpósio científico da Sociedade Brasileira de Computação,
+        com revisão por pares. É o registro mais forte que temos: não é matéria de jornal, é literatura
+        acadêmica com DOI permanente.
+      </p>
+
+      <ul class="lista">
+        <li class="item">
+          <div class="item__meta">
+            <span class="selo">Publicação científica</span>
+            <span class="item__fonte">SBC OpenLib · EDUCOMP</span>
+            <span class="item__data">2025</span>
+          </div>
+          <h3><a href="https://sol.sbc.org.br/index.php/educomp_estendido/article/view/34913" target="_blank" rel="noopener">MapEdu+: Uma plataforma para apoiar a inclusão educacional de pessoas com deficiência e neurodivergentes em escolas públicas</a></h3>
+
+          <dl class="ficha">
+            <div><dt>Publicado em</dt><dd>Anais Estendidos do V Simpósio Brasileiro de Educação em Computação (EDUCOMP), 2025, p. 36–38</dd></div>
+            <div><dt>Autoria</dt><dd>Nataniel Andrade, João Vitor Dobre, Lucy Camacho, Mariela Tamada, Marcel Rios e Ivanilse Calderon</dd></div>
+            <div><dt>Instituições</dt><dd>IFRO e E.E.E.F.M. Barão dos Solimões</dd></div>
+            <div><dt>DOI</dt><dd><a href="https://doi.org/10.5753/educomp_estendido.2025.6591" target="_blank" rel="noopener" style="color:var(--azul-2);">10.5753/educomp_estendido.2025.6591</a></dd></div>
+          </dl>
+
+          <p>
+            O trabalho trata da inclusão educacional de estudantes com deficiência e neurodivergentes
+            no ensino médio público de Porto Velho, com foco na área de computação, e propõe a plataforma
+            colaborativa que permite identificar escolas com suporte adequado.
+          </p>
+
+          <a class="item__link" href="https://sol.sbc.org.br/index.php/educomp_estendido/article/view/34913" target="_blank" rel="noopener">Ver na biblioteca da SBC →</a>
+          <span class="item__url">sol.sbc.org.br/index.php/educomp_estendido/article/view/34913</span>
+        </li>
+
+        <li class="item">
+          <div class="item__meta">
+            <span class="item__fonte">SBC OpenLib</span>
+            <span class="item__data">PDF</span>
+          </div>
+          <h3><a href="https://sol.sbc.org.br/index.php/educomp_estendido/article/view/34913/34704" target="_blank" rel="noopener">Texto completo do artigo, em PDF</a></h3>
+          <p>Download direto pela biblioteca oficial da Sociedade Brasileira de Computação.</p>
+          <a class="item__link" href="https://sol.sbc.org.br/index.php/educomp_estendido/article/view/34913/34704" target="_blank" rel="noopener">Abrir o PDF →</a>
+        </li>
+
+        <li class="item">
+          <div class="item__meta">
+            <span class="item__fonte">Indexação</span>
+            <span class="item__data">Semantic Scholar · ResearchGate</span>
+          </div>
+          <h3>O artigo também está indexado fora da SBC</h3>
+          <p>
+            Aparece no
+            <a href="https://www.semanticscholar.org/paper/MapEdu+:-Uma-plataforma-para-apoiar-a-inclus%C3%A3o-de-e-Andrade-Dobre/4f2d26d4d53a26a34e6a3cfabc240922fdd13160" target="_blank" rel="noopener" style="color:var(--azul-2);font-weight:600;">Semantic Scholar</a>
+            e no
+            <a href="https://www.researchgate.net/publication/392648913_MapEdu_Uma_plataforma_para_apoiar_a_inclusao_educacional_de_pessoas_com_deficiencia_e_neurodivergentes_em_escolas_publicas" target="_blank" rel="noopener" style="color:var(--azul-2);font-weight:600;">ResearchGate</a>,
+            o que facilita citação por outros pesquisadores.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======================================================= MAPEDU+DADOS -->
+
+  <section class="bloco">
+    <div class="conteudo">
+      <div class="bloco__cabeca">
+        <span class="bloco__num">03</span>
+        <h2>MapEdu+Dados</h2>
+      </div>
+
+      <div class="vazio">
+        <strong>Ainda sem registro externo.</strong> O MapEdu+Dados é o módulo de gestão da rede,
+        voltado a secretarias e prefeituras, e até agora não teve cobertura de imprensa nem publicação
+        própria — o que é esperado para um produto que ainda não passou por implantação pública.
+        Quando isso mudar, o registro entra aqui.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ CONTEXTO -->
+
+  <section class="bloco">
+    <div class="conteudo">
+      <div class="bloco__cabeca">
+        <span class="bloco__num">04</span>
+        <h2>o contexto em que o SAMAÚMA atua</h2>
+      </div>
+      <p class="bloco__nota">
+        Estas matérias não falam da ASA CÍVICA. Estão aqui porque descrevem, por fonte oficial e
+        independente, o problema público que o SAMAÚMA endereça — e porque quem avalia o projeto
+        precisa desse pano de fundo.
+      </p>
+
+      <ul class="lista">
+        <li class="item">
+          <div class="item__meta">
+            <span class="item__fonte">SEMA · Prefeitura de Porto Velho</span>
+          </div>
+          <h3><a href="https://sema.portovelho.ro.gov.br/artigo/43127/grandes-geradores-prefeitura-notifica-empreendimentos-para-controle-de-residuos" target="_blank" rel="noopener">Grandes geradores: Prefeitura notifica empreendimentos para controle de resíduos</a></h3>
+          <p>
+            A Secretaria de Meio Ambiente notificando estabelecimentos enquadrados como grandes
+            geradores. É a obrigação legal de onde parte todo o desenho do SAMAÚMA.
+          </p>
+          <a class="item__link" href="https://sema.portovelho.ro.gov.br/artigo/43127/grandes-geradores-prefeitura-notifica-empreendimentos-para-controle-de-residuos" target="_blank" rel="noopener">Ler no portal da SEMA →</a>
+        </li>
+
+        <li class="item">
+          <div class="item__meta">
+            <span class="selo">Leitura obrigatória</span>
+            <span class="item__fonte">Diário RO</span>
+            <span class="item__data">21 ago 2026</span>
+          </div>
+          <h3><a href="https://www.diarioro.com.br/2026/08/21/seminario-porto-velhense-marca-lancamento-da-plataforma-de-grandes-geradores-de-residuos/" target="_blank" rel="noopener">Seminário porto-velhense marca lançamento da plataforma de Grandes Geradores de Resíduos</a></h3>
+          <p>
+            No 1º Seminário de Resíduos Sólidos de Porto Velho, em 14 de agosto de 2026, a SEMA
+            apresentou uma plataforma própria de cadastro e controle de grandes geradores. O seminário
+            foi o mesmo evento que abrigou o Béra Hackathon.
+          </p>
+          <a class="item__link" href="https://www.diarioro.com.br/2026/08/21/seminario-porto-velhense-marca-lancamento-da-plataforma-de-grandes-geradores-de-residuos/" target="_blank" rel="noopener">Ler no Diário RO →</a>
+        </li>
+
+        <li class="item">
+          <div class="item__meta">
+            <span class="item__fonte">Capital Rondônia</span>
+          </div>
+          <h3><a href="https://www.capitalrondonia.com/noticia/novo-cadastro-digital-amplia-controle-sobre-grandes-geradores-de-residuos-em-porto-velho" target="_blank" rel="noopener">Novo cadastro digital amplia controle sobre grandes geradores de resíduos em Porto Velho</a></h3>
+          <p>A mesma plataforma municipal, vista por veículo independente.</p>
+          <a class="item__link" href="https://www.capitalrondonia.com/noticia/novo-cadastro-digital-amplia-controle-sobre-grandes-geradores-de-residuos-em-porto-velho" target="_blank" rel="noopener">Ler no Capital Rondônia →</a>
+        </li>
+
+        <li class="item">
+          <div class="item__meta">
+            <span class="item__fonte">Capital Rondônia</span>
+          </div>
+          <h3><a href="https://www.capitalrondonia.com/noticia/ardpv-aposta-em-tecnologia-e-dados-para-fortalecer-fiscalizacao-e-gestao-de-residuos-em-porto-velho" target="_blank" rel="noopener">ARDPV aposta em tecnologia e dados para fortalecer fiscalização e gestão de resíduos</a></h3>
+          <p>
+            A agência reguladora do município declarando prioridade para tecnologia e dado na
+            fiscalização de resíduos.
+          </p>
+          <a class="item__link" href="https://www.capitalrondonia.com/noticia/ardpv-aposta-em-tecnologia-e-dados-para-fortalecer-fiscalizacao-e-gestao-de-residuos-em-porto-velho" target="_blank" rel="noopener">Ler no Capital Rondônia →</a>
+        </li>
+      </ul>
+
+      <p class="aviso">
+        <strong>Como esta página é mantida.</strong> Cada link foi aberto e conferido antes de entrar.
+        Só entram fontes externas — imprensa, portal oficial ou publicação revisada. Material produzido
+        pela própria ASA CÍVICA fica no restante do site, e não aqui.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="conteudo rodape__linha">
+    <a class="marca" href="./index.html">
+      <span class="marca__simbolo">AC</span>
+      <span class="marca__nome">
+        <strong>ASA CÍVICA</strong>
+        <span>Tecnologia social</span>
+      </span>
+    </a>
+    <span>Porto Velho — RO · <a href="mailto:asacivica@gmail.com">asacivica@gmail.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
